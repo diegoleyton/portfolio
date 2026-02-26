@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Diego Leyton — Senior Software Engineer & Creative Technologist. Metaverse, AR/VR, games, educational tech." />
+  <title>Diego Leyton — Portfolio</title>
+  <style>
+    :root{
+      --bg:#0b0e14;
+      --card:#0f1522;
+      --muted:#a8b3cf;
+      --text:#eaf0ff;
+      --line:rgba(255,255,255,.10);
+      --accent:#7c5cff;
+      --accent2:#2de1c2;
+      --shadow: 0 14px 40px rgba(0,0,0,.35);
+      --radius:16px;
+      --max: 1040px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(900px 600px at 20% -10%, rgba(124,92,255,.25), transparent 60%),
+        radial-gradient(800px 500px at 90% 10%, rgba(45,225,194,.18), transparent 60%),
+        radial-gradient(800px 500px at 50% 110%, rgba(124,92,255,.12), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    a{color:inherit; text-decoration:none}
+    a:hover{opacity:.9}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 56px}
+    .nav{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(11,14,20,.78), rgba(11,14,20,.40));
+      border-bottom: 1px solid var(--line);
+    }
+    .navInner{
+      max-width: var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 6px rgba(124,92,255,.12);
+    }
+    .links{
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-size:14px; color: var(--muted);
+    }
+    .links a{
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid transparent;
+    }
+    .links a:hover{border-color:var(--line); background:rgba(255,255,255,.04)}
+    .hero{
+      padding:38px 0 18px;
+      display:grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns: 1fr;}
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .heroMain{padding:22px}
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      color: var(--muted);
+      font-size:13px;
+      border:1px solid var(--line);
+      padding:8px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,.03);
+    }
+    .kicker .pill{
+      font-weight:600;
+      color: rgba(234,240,255,.95);
+      background: rgba(124,92,255,.18);
+      border:1px solid rgba(124,92,255,.35);
+      padding:2px 8px;
+      border-radius:999px;
+      font-size:12px;
+    }
+    h1{
+      margin:12px 0 10px;
+      font-size:40px;
+      line-height:1.05;
+      letter-spacing:-.8px;
+    }
+    .sub{
+      margin:0;
+      color: var(--muted);
+      font-size:16px;
+      max-width: 70ch;
+    }
+    .ctaRow{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:16px;
+    }
+    .btn{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:10px 12px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      font-size:14px;
+    }
+    .btnPrimary{
+      background: linear-gradient(135deg, rgba(124,92,255,.35), rgba(45,225,194,.18));
+      border-color: rgba(124,92,255,.45);
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+      margin-top:14px;
+    }
+    .col6{grid-column: span 6;}
+    .col4{grid-column: span 4;}
+    .col8{grid-column: span 8;}
+    .col12{grid-column: span 12;}
+    @media (max-width: 900px){
+      .col6,.col4,.col8{grid-column: span 12;}
+    }
+    .mini{padding:16px}
+    .mini h3{margin:0 0 8px; font-size:15px}
+    .mini p{margin:0; color:var(--muted); font-size:14px}
+    .section{
+      margin-top:24px;
+      padding-top:8px;
+    }
+    .sectionHeader{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin-bottom:10px;
+    }
+    .sectionHeader h2{
+      margin:0;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .sectionHeader .hint{
+      color:var(--muted); font-size:13px;
+    }
+    .item{
+      padding:16px;
+      border-top: 1px solid var(--line);
+    }
+    .item:first-child{border-top:0}
+    .itemTop{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:8px;
+    }
+    .title{
+      font-weight:650;
+      letter-spacing:.1px;
+    }
+    .meta{
+      color:var(--muted);
+      font-size:13px;
+      white-space:nowrap;
+    }
+    .tags{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin-top:10px;
+    }
+    .tag{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color: rgba(234,240,255,.92);
+      background: rgba(255,255,255,.03);
+    }
+    ul{margin:10px 0 0 18px; padding:0}
+    li{margin:6px 0; color: var(--muted)}
+    .twoCol{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 900px){ .twoCol{grid-template-columns: 1fr;} }
+    .footer{
+      margin-top:26px;
+      padding:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .kbd{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size:12px;
+      border:1px solid var(--line);
+      padding:2px 8px;
+      border-radius:8px;
+      background: rgba(255,255,255,.03);
+      color: rgba(234,240,255,.9);
+    }
+    .note{
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="navInner">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Diego Leyton</span>
+      </div>
+      <nav class="links" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#impact">Impact</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="heroMain card">
+        <div class="kicker">
+          <span class="pill">Senior SWE • Tech Lead • Creative Technologist</span>
+          <span>Metaverse • AR/VR • Games • Educational Tech</span>
+        </div>
+        <h1>Building systems that make learning joyful.</h1>
+        <p class="sub">
+          I’m a Senior Software Engineer and Creative Technologist with 14+ years of experience,
+          including 7 years at Meta. I build interactive technologies—from creation tools and
+          UI systems for Horizon Worlds to AR collaboration and mobile games released worldwide.
+        </p>
+
+        <div class="ctaRow">
+          <!-- Replace hrefs with your real links -->
+          <a class="btn btnPrimary" href="#contact">Contact</a>
+          <a class="btn" href="https://www.linkedin.com/in/dieleyton" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="#" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="#" target="_blank" rel="noreferrer">Resume (PDF)</a>
+        </div>
+
+        <p class="note">
+          Tip: Add your GitHub Pages URL here once deployed (e.g., <span class="kbd">https://yourname.github.io</span>).
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="mini card col12">
+          <h3>Highlights</h3>
+          <p>Metaverse creation tools & performance tooling • AR collaboration & patented interaction • Unity game development • Educational apps used daily by my kids</p>
+        </div>
+
+        <div class="mini card col6">
+          <h3>Leadership</h3>
+          <p>Cross-team test coverage initiative across 9 teams (~90 engineers), boosting automation from 50% to 90%.</p>
+        </div>
+
+        <div class="mini card col6">
+          <h3>Architecture</h3>
+          <p>Led major migrations in Horizon Worlds; created MVCB pattern for modular AR projects across engines.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="sectionHeader">
+        <h2>Selected Projects</h2>
+        <div class="hint">Pick 3–6 and link demos/videos when possible.</div>
+      </div>
+
+      <div class="card">
+        <div class="item">
+          <div class="itemTop">
+            <div>
+              <div class="title">Educational Applications (Self-Directed Development)</div>
+              <div class="meta">Personal projects</div>
+            </div>
+          </div>
+          <div class="twoCol">
+            <div>
+              <div class="tags">
+                <span class="tag">Interactive learning</span>
+                <span class="tag">Motivation design</span>
+                <span class="tag">Family use</span>
+              </div>
+              <ul>
+                <li>Math learning app using visual interactions to teach addition to toddlers (age 2).</li>
+                <li>Brushing teeth app (Marmilo): virtual pets + rewards to guide hygiene routines.</li>
+              </ul>
+            </div>
+            <div>
+              <p class="sub" style="margin:0;">
+                These tools turned daily routines into playful, self-motivated learning experiences—reflecting my belief that
+                technology can nurture curiosity and autonomy early on.
+              </p>
+              <div class="ctaRow" style="margin-top:12px;">
+                <a class="btn" href="#" target="_blank" rel="noreferrer">Demo (optional)</a>
+                <a class="btn" href="#" target="_blank" rel="noreferrer">Write-up (optional)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="itemTop">
+            <div>
+              <div class="title">Horizon Worlds Creation Tools & Scripting Tutorial</div>
+              <div class="meta">Community resource</div>
+            </div>
+          </div>
+          <div class="tags">
+            <span class="tag">Horizon Worlds</span>
+            <span class="tag">Creator education</span>
+            <span class="tag">Documentation</span>
+          </div>
+          <ul>
+            <li>Created a tutorial for the community; well received and featured as a must-see for beginners.</li>
+          </ul>
+          <div class="ctaRow">
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Link (add)</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="itemTop">
+            <div>
+              <div class="title">Haunted House (Horizon Worlds)</div>
+              <div class="meta">Interactive experience</div>
+            </div>
+          </div>
+          <div class="tags">
+            <span class="tag">Horizon Worlds</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">Interactive storytelling</span>
+          </div>
+          <div class="ctaRow">
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Video (add)</a>
+            <a class="btn" href="#" target="_blank" rel="noreferrer">World link (add)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section id="impact" class="section">
+      <div class="sectionHeader">
+        <h2>Impact</h2>
+        <div class="hint">Concrete outcomes & migrations.</div>
+      </div>
+      <div class="card">
+        <div class="item">
+          <div class="itemTop">
+            <div>
+              <div class="title">Cross-team test coverage initiative (Meta)</div>
+              <div class="meta">9 teams • ~90 engineers</div>
+            </div>
+          </div>
+          <ul>
+            <li>Raised automated test coverage from 50% to 90%.</li>
+            <li>Reduced regressions and improved release stability.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Quality engineering</span>
+            <span class="tag">Cross-team leadership</span>
+            <span class="tag">Release stability</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="itemTop">
+            <div>
+              <div class="title">System migrations (Horizon Worlds)</div>
+              <div class="meta">Architecture & UI</div>
+            </div>
+          </div>
+          <ul>
+            <li>Led migration of creation tools architecture, enabling faster iteration and better creator experiences.</li>
+            <li>Led organization-wide UI system migration to improve maintainability and cross-platform consistency.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Architecture</span>
+            <span class="tag">Migration</span>
+            <span class="tag">Maintainability</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="itemTop">
+            <div>
+              <div class="title">AR innovation (Meta Company)</div>
+              <div class="meta">Patented • AWE 2017 award</div>
+            </div>
+          </div>
+          <ul>
+            <li>Invented a smartphone-to-AR interaction technique (patented), showcased in demos & investor presentations; contributed to securing additional funding.</li>
+            <li>Winner: AWE 2017 Best Presentation Award for Augmented Reality.</li>
+            <li>Created MVCB architecture pattern adopted across AR projects for modularity and engine independence.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">AR/VR</span>
+            <span class="tag">Interaction design</span>
+            <span class="tag">Architecture patterns</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="sectionHeader">
+        <h2>Experience</h2>
+        <div class="hint">Roles + selected bullets (safe for NDA).</div>
+      </div>
+
+      <div class="card">
+        <div class="item">
+          <div class="itemTop">
+            <div>
+              <div class="title">Meta (Facebook) — Horizon Worlds</div>
+              <div class="meta">Nov 2018 – Present • Menlo Park, CA</div>
+            </div>
+          </div>
+          <ul>
+            <li><b>Senior SWE & Tech Lead (Aug 2023 – Present):</b> led performance tools team; led integrity team for safe experiences; drove test coverage initiative.</li>
+            <li><b>Engineering Manager (Jan 2021 – Aug 2023):</b> managed 10+ engineers building creation tools for users to build/share immersive experiences.</li>
+            <li><b>Senior SWE / Tech Lead (Dec 2018 – Jan 2021):</b> creation tools tech lead; VR UI library tech lead; promoted for technical leadership.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Metaverse</span>
+            <span class="tag">Tech lead</span>
+            <span class="tag">Engineering management</span>
+            <span class="tag">Creator tools</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="itemTop">
+            <div>
+              <div class="title">Meta Company (AR) — Lead Engineer</div>
+              <div class="meta">Dec 2016 – Sep 2018 • San Mateo, CA</div>
+            </div>
+          </div>
+          <ul>
+            <li>Lead Engineer for AR Collaboration: simultaneous interaction with holograms in an AR workspace.</li>
+            <li>Built Meta Cloud Infrastructure (Go) as backend & frontend engineer.</li>
+            <li>Senior SWE on SDK team: implemented calibration profile system for Meta2 headset.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Augmented Reality</span>
+            <span class="tag">Go</span>
+            <span class="tag">SDK</span>
+            <span class="tag">Real-time collaboration</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="itemTop">
+            <div>
+              <div class="title">DeNA Studios San Francisco — Technical Lead Engineer</div>
+              <div class="meta">Jun 2015 – Dec 2016 • San Francisco, CA</div>
+            </div>
+          </div>
+          <ul>
+            <li>Tech lead of <b>Deck Storm</b> (Unity 3D), released on Google Play and Apple App Store.</li>
+            <li>Implemented engineering quality standards; reduced QA issues and improved robustness and UX.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Unity</span>
+            <span class="tag">Mobile games</span>
+            <span class="tag">Quality</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="itemTop">
+            <div>
+              <div class="title">DeNA Studios Canada — Senior Software Engineer</div>
+              <div class="meta">Feb 2014 – Jun 2015 • Vancouver, BC</div>
+            </div>
+          </div>
+          <ul>
+            <li>Built architectures used across company games.</li>
+            <li>Senior SWE on <b>World of Thingies</b> (Unity), released on Google Play, App Store, Amazon Appstore.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Unity</span>
+            <span class="tag">Architecture</span>
+            <span class="tag">Mobile</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="itemTop">
+            <div>
+              <div class="title">Atakama Labs (DeNA Studios Santiago)</div>
+              <div class="meta">Jun 2011 – Feb 2014 • Santiago, Chile</div>
+            </div>
+          </div>
+          <ul>
+            <li>Led development of <b>D&amp;D Arena of War</b> (Unity), released on Google Play and App Store.</li>
+            <li>Lead Engineer on <b>Galaxy Assault</b> (JavaScript); contributed to <b>Hell Fire</b> (Unity).</li>
+            <li>Mentored and evangelized Unity adoption; collaborated on internal framework (C++, Obj-C, Java, JS).</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Unity</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Leadership</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="section">
+      <div class="sectionHeader">
+        <h2>Publications</h2>
+        <div class="hint">Add links/DOIs if you want.</div>
+      </div>
+      <div class="card">
+        <div class="item">
+          <div class="itemTop">
+            <div class="title">EBTAM: technology acceptance in e-Business environments</div>
+            <div class="meta">Information Systems and e-Business Management • 2015</div>
+          </div>
+          <p class="sub" style="margin:0;">Leyton, D.; Pino, J.A.; Ochoa, S.F. DOI: 10.1007/s10257-014-0255-2</p>
+        </div>
+        <div class="item">
+          <div class="itemTop">
+            <div class="title">Modeling Technology Acceptance in E-Business Environments</div>
+            <div class="meta">ICEBE 2013 • Coventry, UK</div>
+          </div>
+          <p class="sub" style="margin:0;">Leyton, D.; Pino, J.A.; Ochoa, S.F. DOI: 10.1109/ICEBE.2013.14</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="sectionHeader">
+        <h2>Skills</h2>
+        <div class="hint">Keep it scannable.</div>
+      </div>
+      <div class="card">
+        <div class="item">
+          <div class="tags">
+            <span class="tag">C#</span>
+            <span class="tag">Unity 3D</span>
+            <span class="tag">C++</span>
+            <span class="tag">Java</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+            <span class="tag">AR</span>
+            <span class="tag">VR</span>
+            <span class="tag">Game Dev</span>
+            <span class="tag">Educational Tech</span>
+            <span class="tag">Team Management</span>
+            <span class="tag">Agile</span>
+            <span class="tag">Git / Phabricator</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="sectionHeader">
+        <h2>Contact</h2>
+        <div class="hint">Replace placeholders if needed.</div>
+      </div>
+      <div class="card">
+        <div class="item">
+          <p class="sub" style="margin:0 0 10px;">
+            Concord, CA • <a class="btn" style="padding:6px 10px; border-radius:10px" href="mailto:dleytons@gmail.com">dleytons@gmail.com</a>
+          </p>
+          <div class="ctaRow">
+            <a class="btn btnPrimary" href="mailto:dleytons@gmail.com">Email me</a>
+            <a class="btn" href="https://www.linkedin.com/in/dieleyton" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn" href="#" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <p class="note">
+            Optional: add a short “availability” line here (e.g., open to Staff/Senior roles, AR/VR, creator tools, interactive learning).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> Diego Leyton</div>
+      <div>Built as a single-file site. Deploy via GitHub Pages in minutes.</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
