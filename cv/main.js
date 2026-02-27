@@ -219,57 +219,67 @@ function renderProjects(title, rows) {
   const list = (rows || []).slice().sort((a,b)=>num(a.order)-num(b.order));
   if (!list.length) return "";
 
-  let html = "";
-  let inBlock = false;
+  const groups = list.filter(r => String(r.kind || "").toLowerCase() === "group");
+  const items  = list.filter(r => String(r.kind || "").toLowerCase() !== "group");
 
-  for (const r of list) {
-    const isHeader = truthy(r.is_header);
-    const t = String(r.title || "").trim();
-    const d = String(r.description || "").trim();
-    const u = String(r.url || "").trim();
-
-    if (isHeader) {
-      if (inBlock) html += `</ul></div>`; // close previous block
-      inBlock = true;
-
-      html += `
-        <div class="proj-block">
-          <div class="proj-subtitle">${t}</div>
-          ${d ? `<div class="proj-intro">${d}</div>` : ""}
-          <ul class="proj-list">
-      `;
-      continue;
-    }
-
-    // bullet rows
-    if (!inBlock) {
-      // fallback: if user forgot a header, create an implicit block
-      inBlock = true;
-      html += `
-        <div class="proj-block">
-          <div class="proj-subtitle">Projects</div>
-          <ul class="proj-list">
-      `;
-    }
-
-    const label = u ? `<a href="${u}" target="_blank" rel="noreferrer">${t}</a>` : t;
-    const tail = d ? ` ${d}` : "";
-
-    if (t || d) {
-      html += `<li><span class="proj-item-title">${label}</span>${tail ? `<span class="proj-item-desc">${tail}</span>` : ""}</li>`;
-    }
+  // fallback: if no groups defined, show nothing or a simple list
+  if (!groups.length) {
+    return `
+      <section class="section">
+        <h2>${esc(title)}</h2>
+        <div class="card">
+          <ul>${items.map(i => `<li>${projectItemLine(i)}</li>`).join("")}</ul>
+        </div>
+      </section>
+    `;
   }
 
-  if (inBlock) html += `</ul></div>`; // close last block
+  const blocksHtml = groups.map(g => {
+    const gid = String(g.group_id || "").trim();
+    const blockItems = items
+      .filter(i => String(i.group_id || "").trim() === gid)
+      .sort((a,b)=>num(a.order)-num(b.order));
+
+    return `
+      <div class="proj-role">
+        <div class="proj-title">${htmlOrText(g.title)}</div>
+        ${g.description ? `<div class="proj-sub">${htmlOrText(g.description)}</div>` : ""}
+        ${blockItems.length ? `
+          <ul class="proj-bullets">
+            ${blockItems.map(i => `<li>${projectItemLine(i)}</li>`).join("")}
+          </ul>
+        ` : ""}
+      </div>
+    `;
+  }).join("");
 
   return `
     <section class="section">
       <h2>${esc(title)}</h2>
-      <div class="card proj-card">
-        ${html}
+      <div class="card">
+        ${blocksHtml}
       </div>
     </section>
   `;
+}
+
+function projectItemLine(i) {
+  const t = String(i.title || "").trim();
+  const d = String(i.description || "").trim();
+  const u = String(i.url || "").trim();
+
+  const titleHtml = u
+    ? `<a href="${esc(u)}" target="_blank" rel="noreferrer">${htmlOrText(t)}</a>`
+    : `${htmlOrText(t)}`;
+
+  // Bold title like your PDF, then description after
+  return `<span class="proj-item-title">${titleHtml}</span>${d ? ` <span class="proj-item-desc">${htmlOrText(d)}</span>` : ""}`;
+}
+
+// If you currently use raw HTML in the sheet (e.g. <b>), keep it.
+// If not, this still works fine.
+function htmlOrText(s) {
+  return String(s ?? "");
 }
 
 function renderSkills(title, rows) {
