@@ -364,4 +364,21 @@ li {
   .h-summary, .role-summary, .proj-role-sub, .impact-body, .impact-p{
     max-width: none !important;
   }
+
+  /* Impact: disable grid in print so content can paginate */
+  .impact-section .grid-2{
+    display: block !important;
+  }
+
+  /* Allow Impact cards to split naturally */
+  .impact-section .card,
+  .impact-section .impact-card{
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  /* Optional: keep spacing between impact cards when stacked */
+  .impact-section .impact-card{
+    margin-bottom: 10px !important;
+  }
 }
