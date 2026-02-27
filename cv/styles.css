@@ -131,19 +131,35 @@ li {
   text-justify: inter-word;
 }
 
+/* Impact section */
+
+.impact-card{
+  padding: 18px;
+}
+
 .impact-cat{
-  font-weight: 750;
-  margin-bottom: 10px;
+  font-weight: 850;
+  font-size: 18px;
+  letter-spacing: -0.2px;
+  margin-bottom: 12px;
 }
 
 .impact-body{
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
-.impact-line{
-  line-height: 1.55;
+.impact-p{
+  margin: 0;
+  line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.impact-divider{
+  border-top: 1px solid var(--line);
+  margin: 14px 0;
 }
 
 /* PRINT */
