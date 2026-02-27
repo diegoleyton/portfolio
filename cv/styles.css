@@ -257,6 +257,10 @@ li {
   }
 
   .noprint{ display:none !important; }
+  /* hard kill in case something overrides noprint */
+  header.topbar, #btnPrint, #status, #generatedAt{
+    display:none !important;
+  }
 
   /* Remove container width constraints */
   .container {
