@@ -7,7 +7,9 @@ const contentEl = document.getElementById("content");
 const statusEl = document.getElementById("status");
 const generatedAtEl = document.getElementById("generatedAt");
 
-document.getElementById("btnPrint").addEventListener("click", () => window.print());
+document.getElementById("btnPrint").onclick = () => {
+  window.location.href = "./Diego_Leyton_CV.pdf";
+};
 
 init();
 
