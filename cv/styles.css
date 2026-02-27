@@ -326,7 +326,7 @@ li {
     color: inherit !important;
   }
 }
-.card .role:first-of-type{
+.exp-roles .role:first-child{
   border-top: none !important;
   padding-top: 0 !important;
 }
