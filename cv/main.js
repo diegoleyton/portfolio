@@ -236,7 +236,7 @@ function renderProjects(title, rows) {
 
     if (!current) {
       // If someone forgot a header, create an implicit one
-      current = { header: { title: "Projects", desc: "" }, items: [] };
+      current = { header: { title: "Personal Projects", desc: "" }, items: [] };
       blocks.push(current);
     }
 
