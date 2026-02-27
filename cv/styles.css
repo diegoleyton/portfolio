@@ -252,6 +252,23 @@ li {
   font-weight: 400;
 }
 
+/* links */
+a{
+  color:#1f4fd8;          /* azul profesional, no saturado */
+  text-decoration:none;
+  border-bottom:1px solid rgba(31,79,216,.35);
+}
+
+a:hover{
+  border-bottom-color:#1f4fd8;
+}
+
+a[href^="http"]::after{
+  content:" ↗";
+  font-size:.85em;
+  opacity:.6;
+}
+
 /* PRINT */
 @media print {
 
@@ -320,7 +337,13 @@ li {
   }
 
   /* Links look like text */
-  a { text-decoration: none !important; color: inherit !important; }
+  a{
+    color:#1a56db !important;
+    text-decoration:none !important;
+    border-bottom:1px solid #1a56db !important;
+  }
+  
+  a::after{ display:none; }
 
   /* Hero uses full width */
   .hero, #hero, .hero * { max-width: none !important; }
