@@ -162,50 +162,46 @@ function renderExperience(title, roles, bullets) {
   const groupsHtml = [];
 
   for (const [groupName, groupRoles] of byGroup.entries()) {
+    // find group summary (first non-empty one)
+    const groupSummary = groupRoles
+      .map(r => r.group_summary)
+      .find(Boolean);
+  
     const itemsHtml = groupRoles.map(r => {
       const rBullets = bulletList
         .filter(b => String(b.role_id) === String(r.id))
         .sort((a,b)=>num(a.order)-num(b.order));
-
-      const parents = rBullets.filter(x => !x.parent_order);
-      const subs = rBullets.filter(x => x.parent_order);
-
-      const bulletHtml = parents.map(p => {
-        const children = subs
-          .filter(s => String(s.parent_order) === String(p.order))
-          .sort((a,b)=>num(a.order)-num(b.order));
-        return `
-          <li>
-            ${esc(p.bullet || "")}
-            ${children.length ? `<ul>${children.map(c=>`<li>${esc(c.bullet||"")}</li>`).join("")}</ul>` : ""}
-          </li>
-        `;
-      }).join("");
-
+  
+      const bulletHtml = rBullets.length
+        ? `<ul>${rBullets.map(p => `<li>${esc(p.bullet || "")}</li>`).join("")}</ul>`
+        : "";
+  
       const companyLine = [
         esc(r.company || ""),
         r.location ? esc(r.location) : ""
       ].filter(Boolean).join(" · ");
-
+  
       return `
         <div class="role">
           <div class="role-title">
             <div class="left">${esc(r.role_title || "")}</div>
             <div class="right">${esc(formatRange(r.start, r.end))}</div>
           </div>
-          <div class="role-sub">
-            ${companyLine}
-            ${r.company_url ? ` · ${link(r.company_url, shortUrl(r.company_url))}` : ""}
-          </div>
+          <div class="role-sub">${companyLine}</div>
           ${r.summary ? `<div class="role-summary">${esc(r.summary)}</div>` : ""}
-          ${bulletHtml ? `<ul>${bulletHtml}</ul>` : ""}
+          ${bulletHtml}
         </div>
       `;
     }).join("");
-
+  
     groupsHtml.push(`
       <div class="card">
-        <div style="font-weight:800; margin-bottom:12px">${esc(groupName)}</div>
+        <div class="exp-group-title">${esc(groupName)}</div>
+  
+        ${groupSummary ? `
+          <div class="exp-group-summary">${esc(groupSummary)}</div>
+        ` : ""}
+  
         ${itemsHtml}
       </div>
     `);
