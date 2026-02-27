@@ -334,13 +334,29 @@ function formatRange(start, end) {
   const b = end ? fmtYM(end) : "Present";
   return [a, b].filter(Boolean).join(" — ");
 }
-function fmtYM(ym) {
-  const s = String(ym ?? "").trim();
+function fmtYM(value) {
+  const s = String(value ?? "").trim();
   if (!s) return "";
-  const [y, m] = s.split("-").map(x => parseInt(x, 10));
-  if (!y || !m) return s;
-  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  return `${months[m-1] || "?"} ${y}`;
+
+  // If it's ISO date, parse it.
+  if (s.includes("T")) {
+    const d = new Date(s);
+    if (!isNaN(d.getTime())) {
+      const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      return `${months[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+    }
+  }
+
+  // If it's YYYY-MM
+  const m = s.match(/^(\d{4})-(\d{2})/);
+  if (m) {
+    const y = parseInt(m[1], 10);
+    const mm = parseInt(m[2], 10);
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return `${months[mm - 1] || "?"} ${y}`;
+  }
+
+  return s;
 }
 function shortUrl(url) {
   try {
