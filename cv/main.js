@@ -242,8 +242,10 @@ function renderProjects(title, rows) {
 
     return `
       <div class="proj-role">
-        <div class="proj-title">${htmlOrText(g.title)}</div>
-        ${g.description ? `<div class="proj-sub">${htmlOrText(g.description)}</div>` : ""}
+        <div class="proj-role-title">
+          <div class="proj-role-left">${htmlOrText(g.title)}</div>
+        </div>
+        ${g.description ? `<div class="proj-role-sub">${htmlOrText(g.description)}</div>` : ""}
         ${blockItems.length ? `
           <ul class="proj-bullets">
             ${blockItems.map(i => `<li>${projectItemLine(i)}</li>`).join("")}
@@ -265,14 +267,20 @@ function renderProjects(title, rows) {
 
 function projectItemLine(i) {
   const t = String(i.title || "").trim();
-  const d = String(i.description || "").trim();
+  let d = String(i.description || "").trim();
   const u = String(i.url || "").trim();
+
+  // If description starts with the title (common after copy/paste), remove the duplicate.
+  // Example: title="Marmilo" description="Marmilo using interactive..."
+  if (t && d.toLowerCase().startsWith(t.toLowerCase())) {
+    d = d.slice(t.length).trim();
+    d = d.replace(/^[:\-–—]\s*/, ""); // remove leading punctuation
+  }
 
   const titleHtml = u
     ? `<a href="${esc(u)}" target="_blank" rel="noreferrer">${htmlOrText(t)}</a>`
     : `${htmlOrText(t)}`;
 
-  // Bold title like your PDF, then description after
   return `<span class="proj-item-title">${titleHtml}</span>${d ? ` <span class="proj-item-desc">${htmlOrText(d)}</span>` : ""}`;
 }
 
