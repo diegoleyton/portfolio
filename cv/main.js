@@ -313,12 +313,7 @@ function groupBy(arr, fn) {
 }
 
 function esc(s) {
-  return String(s ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+  return String(s ?? "");
 }
 function num(x) {
   const n = Number(String(x).trim());
