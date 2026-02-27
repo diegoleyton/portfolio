@@ -108,29 +108,25 @@ function renderBulletsSection(title, rows, field) {
 function renderImpact(title, rows) {
   if (!Array.isArray(rows) || !rows.length) return "";
 
-  const byCat = groupBy(rows, r => String(r.category || "Impact"));
+  // Group by category
+  const byCat = groupBy(rows, r => String(r.category || "Impact").trim() || "Impact");
+
   const cards = [];
   for (const [cat, items] of byCat.entries()) {
-    const sorted = items.slice().sort((a,b)=>num(a.order)-num(b.order));
-    const parents = sorted.filter(x => !x.parent_order);
-    const subs = sorted.filter(x => x.parent_order);
+    const sorted = items.slice().sort((a, b) => num(a.order) - num(b.order));
 
-    const html = parents.map(p => {
-      const children = subs
-        .filter(s => String(s.parent_order) === String(p.order))
-        .sort((a,b)=>num(a.order)-num(b.order));
-      return `
-        <li>
-          ${esc(p.bullet || "")}
-          ${children.length ? `<ul>${children.map(c=>`<li>${esc(c.bullet||"")}</li>`).join("")}</ul>` : ""}
-        </li>
-      `;
-    }).join("");
+    // Each row becomes a "paragraph block"
+    const blocks = sorted
+      .map(r => String(r.bullet || "").trim())
+      .filter(Boolean)
+      .flatMap(text => splitLines(text)) // split multi-line cell into multiple lines
+      .map(line => `<div class="impact-line">${esc(line)}</div>`)
+      .join("");
 
     cards.push(`
       <div class="card">
-        <div style="font-weight:700; margin-bottom:8px">${esc(cat)}</div>
-        <ul>${html}</ul>
+        <div class="impact-cat">${esc(cat)}</div>
+        <div class="impact-body">${blocks}</div>
       </div>
     `);
   }
@@ -141,6 +137,15 @@ function renderImpact(title, rows) {
       <div class="grid-2">${cards.join("")}</div>
     </section>
   `;
+}
+
+function splitLines(text) {
+  // Supports multi-line cells. Also supports lines starting with "-" or "•" by stripping them.
+  return String(text)
+    .split(/\r?\n+/)
+    .map(s => s.trim())
+    .filter(Boolean)
+    .map(s => s.replace(/^[-•]\s*/, ""));
 }
 
 function renderExperience(title, roles, bullets) {
