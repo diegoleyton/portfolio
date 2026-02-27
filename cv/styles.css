@@ -244,29 +244,32 @@ li {
 }
 
 /* PRINT */
-@media print{
-  .noprint{ display:none !important; }
-  .container{ max-width: 100%; padding: 0; }
-  a{ text-decoration:none; border:none; color: inherit; }
-  .section{ break-inside: avoid; }
-  .role{ break-inside: avoid; }
-  .card{ border: 1px solid #ddd; }
-  @page{ margin: 10mm; }
-  /* Force 2-column layout in PDF/print */
+@media print {
+  /* Force 2 columns for grids */
   .grid-2{
     display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 12px !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 10px !important;
   }
 
-  /* Avoid cards breaking in weird places */
-  .card{
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  /* Make sure grid items don't expand weirdly */
+  /* Let grid children shrink (very important) */
   .grid-2 > *{
-    min-width: 0;
+    min-width: 0 !important;
+  }
+
+  /* Cards shrink nicely on print */
+  .card{
+    padding: 12px !important;
+  }
+
+  /* Chips wrap and shrink so 2 columns can fit */
+  .chips{
+    gap: 6px !important;
+  }
+  .chip{
+    padding: 4px 8px !important;
+    font-size: 12px !important;
+    white-space: normal !important;   /* allow wrap inside chip */
+    max-width: 100% !important;
   }
 }
