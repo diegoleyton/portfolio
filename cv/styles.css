@@ -138,10 +138,12 @@ li {
 }
 
 .impact-cat{
-  font-weight: 850;
-  font-size: 18px;
-  letter-spacing: -0.2px;
-  margin-bottom: 12px;
+  font-size: 1em;          
+  font-weight: 700;        
+  letter-spacing: 0;
+  margin-bottom: 6px;
+  border-bottom:1px solid #eee;
+  padding-bottom:4px;
 }
 
 .impact-body{
@@ -345,5 +347,10 @@ li {
     margin: 0 0 10px 0 !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
+  }
+
+  .impact-cat{
+    font-size: 1em !important;
+    font-weight: 700 !important;
   }
 }
