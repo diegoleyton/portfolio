@@ -245,62 +245,30 @@ li {
 /* PRINT */
 @media print {
 
-  /* Page setup */
-  @page {
-    size: Letter;
-    margin: 8mm;
-  }
+  @page { size: Letter; margin: 8mm; }
 
-  html, body {
-    background: white !important;
-  }
+  html, body { background: white !important; }
 
-  /* Font scaling for print (safe: no transform) */
+  /* Font scaling (only affects rem/em; safe to keep) */
   html { font-size: 11px !important; }
   body { font-size: 11px !important; line-height: 1.45 !important; }
 
   h1 { font-size: 20px !important; }
-  h2 { font-size: 14px !important; margin: 0 0 6px 0 !important; }
+  h2 { font-size: 14px !important; margin: 0 0 6px 0 !important; break-after: avoid; page-break-after: avoid; }
   h3 { font-size: 13px !important; }
 
   /* Hide UI */
   .noprint { display: none !important; }
   header.topbar, #btnPrint, #status, #generatedAt { display: none !important; }
 
-  /* Remove container width constraints */
-  .container {
-    max-width: 100% !important;
-    padding: 0 !important;
-  }
+  /* Layout width */
+  .container { max-width: 100% !important; padding: 0 !important; }
 
-  /* Default: allow natural pagination */
-  section{
-    break-inside: auto;
-    page-break-inside: auto;
-  }
+  /* Default pagination */
+  section { break-inside: auto; page-break-inside: auto; }
 
   /* Avoid breaking small, atomic blocks */
-  .card, .role, .proj-role{
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  /* But allow Impact to split across pages (prevents big blank gaps) */
-  .impact-card, .impact-body{
-    break-inside: auto !important;
-    page-break-inside: auto !important;
-  }
-
-  h2{
-    break-after: avoid;
-    page-break-after: avoid;
-  }
-
-  /* If Impact is wrapped in .grid-2, also allow it */
-  .impact-card{
-    break-before: auto;
-    page-break-before: auto;
-  }
+  .card, .role, .proj-role { break-inside: avoid; page-break-inside: avoid; }
 
   /* Cards */
   .card {
@@ -309,31 +277,24 @@ li {
     box-shadow: none !important;
   }
 
-  /* FORCE 2-column grids in print */
-  .grid-2 {
+  /* Keep 2-column grids in print (Skills etc.) */
+  .grid-2{
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
     gap: 10px !important;
   }
+  .grid-2 > * { min-width: 0 !important; }
 
-  /* Allow grid children to shrink (critical for Chrome print) */
-  .grid-2 > * {
-    min-width: 0 !important;
-  }
-
-  /* Chips layout fix */
-  .chips {
-    gap: 6px !important;
-  }
-
-  .chip {
+  /* Chips */
+  .chips { gap: 6px !important; }
+  .chip{
     padding: 4px 8px !important;
     font-size: 12px !important;
     white-space: normal !important;
     max-width: 100% !important;
   }
 
-  /* Slightly tighten vertical rhythm */
+  /* Tighten vertical rhythm */
   .role { padding: 10px 0 !important; }
   .role-sub { margin-top: 4px !important; }
   .role-summary { margin-top: 8px !important; }
@@ -342,43 +303,32 @@ li {
   .proj-bullets { margin-top: 10px !important; }
   .proj-bullets li { margin: 6px 0 !important; }
 
-  /* Avoid double rule under company subtitle (if you removed summary border already, this is harmless) */
+  /* Experience: avoid double line under company summary */
   .exp-group-summary{
     border-bottom: none !important;
     padding-bottom: 0 !important;
   }
 
-  /* Links: look like text in PDF */
-  a {
-    text-decoration: none !important;
-    color: inherit !important;
-  }
+  /* Links look like text */
+  a { text-decoration: none !important; color: inherit !important; }
 
-  /* Make hero text use full printable width */
-  .hero, #hero,
-  .hero *{
-    max-width: none !important;
-  }
+  /* Hero uses full width */
+  .hero, #hero, .hero * { max-width: none !important; }
+  .h-summary, .role-summary, .proj-role-sub, .impact-body, .impact-p { max-width: none !important; }
 
-  /* If you have a specific class that limits width, override it too */
-  .h-summary, .role-summary, .proj-role-sub, .impact-body, .impact-p{
-    max-width: none !important;
-  }
-
-  /* Impact: disable grid in print so content can paginate */
+  /* ---------- Impact: use multicolumn instead of grid for print ---------- */
   .impact-section .grid-2{
     display: block !important;
+    column-count: 2;
+    column-gap: 12px;
   }
 
-  /* Allow Impact cards to split naturally */
-  .impact-section .card,
+  /* Cards should stay intact inside columns */
   .impact-section .impact-card{
-    break-inside: auto !important;
-    page-break-inside: auto !important;
-  }
-
-  /* Optional: keep spacing between impact cards when stacked */
-  .impact-section .impact-card{
-    margin-bottom: 10px !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 10px 0 !important;
   }
 }
