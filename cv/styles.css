@@ -164,6 +164,14 @@ li {
   margin: 14px 0;
 }
 
+/* Force Impact box titles to be normal-sized */
+.impact-card .impact-cat{
+  font-size: 13px !important;   /* o 13px si lo quieres más sutil */
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+}
+
 .exp-group-title{
   font-weight: 800;
   font-size: 19px;
@@ -352,5 +360,11 @@ li {
   .impact-cat{
     font-size: 1em !important;
     font-weight: 700 !important;
+  }
+
+  .impact-card .impact-cat{
+    font-size: 11px !important; /* print un poco más compacto */
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
   }
 }
