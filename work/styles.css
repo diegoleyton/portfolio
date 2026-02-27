@@ -91,14 +91,14 @@ html,body{
 }
 
 /* Sections */
-.section{ margin-top: 22px; }
+.section{ margin-top: 18px; }
 
 .section-title{
   font-size: 13px;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--muted);
-  margin: 0 0 12px;
+  margin: 0 0 8px;
 }
 
 /* Card */
@@ -113,6 +113,7 @@ html,body{
     inset 0 1px 0 rgba(255,255,255,.02);
 
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  backdrop-filter: blur(6px);
 }
 
 .card:hover{
