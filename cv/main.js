@@ -198,7 +198,7 @@ function renderExperience(title, roles, bullets) {
       <div class="card">
         <div class="exp-group-title">${esc(groupName)}</div>
   
-        ${groupSummary && groupRoles.length > 1 ? `
+        ${groupSummary? `
           <div class="exp-group-summary">${groupSummary}</div>
         ` : ""}
   
