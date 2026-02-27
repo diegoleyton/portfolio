@@ -131,6 +131,21 @@ li {
   text-justify: inter-word;
 }
 
+.impact-cat{
+  font-weight: 750;
+  margin-bottom: 10px;
+}
+
+.impact-body{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.impact-line{
+  line-height: 1.55;
+}
+
 /* PRINT */
 @media print{
   .noprint{ display:none !important; }
