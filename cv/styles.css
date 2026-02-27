@@ -179,37 +179,37 @@ li {
   hyphens: auto;
 }
 
-/* Projects (grouped like the PDF) */
-.proj-card { padding: 18px; }
-
-.proj-block + .proj-block{
-  margin-top: 16px;
-  padding-top: 14px;
+/* Projects styled like Experience */
+.proj-role{
+  padding: 12px 0;
   border-top: 1px solid var(--line);
 }
-
-.proj-subtitle{
-  font-weight: 850;
-  font-size: 18px;
-  letter-spacing: -0.2px;
-  margin-bottom: 6px;
+.proj-role:first-child{
+  border-top: none;
+  padding-top: 0;
 }
 
-.proj-intro{
+.proj-title{
+  font-weight: 750;
+  font-size: 20px;
+  margin: 0;
+}
+
+.proj-sub{
+  margin-top: 8px;
   color: var(--muted);
-  line-height: 1.6;
-  margin-bottom: 10px;
+  line-height: 1.55;
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
 }
 
-.proj-list{
-  margin: 0;
+.proj-bullets{
+  margin-top: 12px;
   padding-left: 20px;
 }
 
-.proj-list li{
+.proj-bullets li{
   margin: 8px 0;
   line-height: 1.6;
   text-align: justify;
@@ -217,17 +217,14 @@ li {
   hyphens: auto;
 }
 
+.proj-item-title{
+  font-weight: 700;
+}
 .proj-item-title a{
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid var(--line);
-  font-weight: 650;
 }
-
-.proj-item-title{
-  font-weight: 650;
-}
-
 .proj-item-desc{
   color: var(--muted);
 }
