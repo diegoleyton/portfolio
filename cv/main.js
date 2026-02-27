@@ -1,6 +1,7 @@
 // Paste your Apps Script Web App URL here:
 const DATA_URL = "https://script.google.com/macros/s/AKfycbzSE3uE_-l5qVDsj-KmYkuggIxjlPq5vuhzFvZL7RFYbVclHTgLyO5kTIv_sZscXMQLHg/exec";
 
+
 const heroEl = document.getElementById("hero");
 const contentEl = document.getElementById("content");
 const statusEl = document.getElementById("status");
