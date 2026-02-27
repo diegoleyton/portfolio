@@ -33,6 +33,7 @@ async function init() {
   } catch (err) {
     console.error(err);
     statusEl.textContent = `Could not load CV data. Check DATA_URL and deployment permissions. (${err.message})`;
+    document.documentElement.dataset.cvReady = "1";
   }
 }
 
@@ -86,6 +87,7 @@ function renderAll(d) {
   }
 
   contentEl.innerHTML = blocks.filter(Boolean).join("\n");
+  document.documentElement.dataset.cvReady = "1";
 }
 
 function renderBulletsSection(title, rows, field) {
