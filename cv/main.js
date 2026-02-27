@@ -202,7 +202,9 @@ function renderExperience(title, roles, bullets) {
           <div class="exp-group-summary">${groupSummary}</div>
         ` : ""}
   
-        ${itemsHtml}
+        <div class="exp-roles">
+          ${itemsHtml}
+        </div>
       </div>
     `);
   }
