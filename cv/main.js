@@ -164,8 +164,8 @@ function renderExperience(title, roles, bullets) {
   for (const [groupName, groupRoles] of byGroup.entries()) {
     // find group summary (first non-empty one)
     const groupSummary = groupRoles
-      .map(r => r.group_summary)
-      .find(Boolean);
+      .map(r => String(r.group_summary || "").trim())
+      .find(s => s.length > 0);
   
     const itemsHtml = groupRoles.map(r => {
       const rBullets = bulletList
@@ -198,8 +198,8 @@ function renderExperience(title, roles, bullets) {
       <div class="card">
         <div class="exp-group-title">${esc(groupName)}</div>
   
-        ${groupSummary ? `
-          <div class="exp-group-summary">${esc(groupSummary)}</div>
+        ${groupSummary && groupRoles.length > 1 ? `
+          <div class="exp-group-summary">${groupSummary}</div>
         ` : ""}
   
         ${itemsHtml}
