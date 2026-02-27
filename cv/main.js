@@ -317,7 +317,7 @@ function renderSkills(title, rows) {
   }
   return `
     <section class="section">
-      <h2>${esc(title)}</h2>
+      <h2 class="section-title">${esc(title)}</h2>
       <div class="grid-2">${cards.join("")}</div>
     </section>
   `;
