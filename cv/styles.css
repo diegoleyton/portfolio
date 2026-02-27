@@ -341,6 +341,32 @@ a:hover{
   font-weight: 400;
 }
 
+a,
+a:visited{
+  color: var(--link) !important;
+  text-decoration: none;
+  border-bottom: 1px solid var(--link-soft);
+}
+
+a:hover{
+  border-bottom-color: var(--link);
+}
+
+/* force inside sections that previously inherited color */
+.h-meta a,
+.role-sub a,
+.proj-item-title a{
+  color: var(--link) !important;
+}
+
+/* PRINT version */
+@media print{
+  a{
+    color: var(--link) !important;
+    border-bottom: 1px solid var(--link) !important;
+  }
+}
+
 /* =========================================================
    PRINT
 ========================================================= */
