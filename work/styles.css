@@ -353,8 +353,8 @@ a:hover{
 }
 
 .proj-row{
-  padding: 14px 0;
-  border-top: 1px solid var(--line);
+  padding: 16px 0;
+  border-top: 1px solid rgba(255,255,255,.10);
 }
 
 .proj-row:first-child{
@@ -362,10 +362,11 @@ a:hover{
 }
 
 .proj-row-title{
-  font-weight: 850;
-  font-size: 16px;
+  font-weight: 900;
+  font-size: 18px;
   letter-spacing: -0.01em;
   margin-bottom: 6px;
+  color: var(--text);
 }
 
 .proj-row-desc{
@@ -381,24 +382,23 @@ a:hover{
   gap: 10px;
 }
 
-/* chiplinks that look like your old pills */
 .chiplink{
   display:inline-flex;
   align-items:center;
-  padding: 7px 12px;
+  padding: 7px 10px;
   border-radius: 999px;
   text-decoration:none;
-  font-weight: 750;
 
-  color: var(--accent);
-  background: rgba(77,163,255,.12);
+  background: var(--accent-soft);
   border: 1px solid rgba(77,163,255,.25);
+  color: var(--accent);
 
-  transition: transform .16s ease, background .16s ease, border-color .16s ease;
+  font-weight: 750;
+  transition: background .18s ease, border-color .18s ease, transform .18s ease;
 }
 
 .chiplink:hover{
-  background: rgba(77,163,255,.22);
+  background: rgba(77,163,255,.25);
   border-color: rgba(77,163,255,.45);
   text-decoration:none;
   transform: translateY(-1px);
