@@ -167,6 +167,44 @@ function renderImpact(rows){
   return `<div class="grid-2">${cards.join("")}</div>`;
 }
 
+function renderProjectCard(p){
+  const links = parseLinksCell(p.links);
+  const img = normalizeImagePath(p.image);
+
+  return `
+    <div class="card proj-card">
+      <div class="proj-head">
+        ${img ? `<img class="proj-thumb" src="${img}" alt="">` : ""}
+        <div class="proj-text">
+          <div class="proj-title">${safeHTML(p.title || "")}</div>
+          <div class="proj-desc">${safeHTML(p.description || "")}</div>
+          <div class="proj-links">
+            ${links.map(l => `
+              <a class="linkbtn" href="${l.url}" target="_blank">${safeHTML(l.label)}</a>
+            `).join("")}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderMiniProject(p){
+  const links = parseLinksCell(p.links);
+  return `
+    <div class="proj-mini">
+      <div class="proj-mini-left">
+        <div class="proj-mini-title">${safeHTML(p.title)}</div>
+      </div>
+      <div class="proj-mini-links">
+        ${links.map(l => `
+          <a href="${l.url}" target="_blank">${safeHTML(l.label)}</a>
+        `).join(" • ")}
+      </div>
+    </div>
+  `;
+}
+
 function renderProjects(categories, projects){
   const cats = (categories || []).slice().sort((a,b)=>num(a.order)-num(b.order));
   const visibleProjects = (projects || []).filter(p => parseBool(p.visible));
@@ -178,41 +216,34 @@ function renderProjects(categories, projects){
     const list = (byCat.get(catName) || []).slice().sort((a,b)=>num(a.order)-num(b.order));
     if (!list.length) return "";
 
-    const catDesc = safeHTML(c.description || "");
+    const featured = list.filter(p => parseBool(p.featured));
+    const regular = list.filter(p => !parseBool(p.featured));
 
-    const cards = list.map(p => {
-      const links = parseLinksCell(p.links);
-      const img = normalizeImagePath(p.image);
-      const hasImg = Boolean(img);
+    const featuredCards = featured.map(renderProjectCard).join("");
 
-      const buttons = links.map(l => (
-        `<a class="linkbtn" href="${l.url}" target="_blank" rel="noopener noreferrer">${safeHTML(l.label)}</a>`
-      )).join("");
-
-      return `
-        <div class="card proj-card">
-          <div class="proj-head">
-            ${hasImg ? `<img class="proj-thumb" src="${img}" alt="">` : ""}
-            <div class="proj-text">
-              <div class="proj-title">${safeHTML(p.title || "")}</div>
-              <div class="proj-desc">${safeHTML(p.description || "")}</div>
-              ${buttons ? `<div class="proj-links">${buttons}</div>` : ""}
-            </div>
+    const regularList = regular.length
+      ? `
+        <div class="card proj-group">
+          <div class="proj-group-title">More Projects</div>
+          <div class="proj-mini-list">
+            ${regular.map(renderMiniProject).join("")}
           </div>
         </div>
-      `;
-    }).join("");
+      `
+      : "";
 
     return `
       <section class="section">
         <h3 class="cat-title">${safeHTML(catName)}</h3>
-        ${catDesc ? `<div class="cat-desc">${catDesc}</div>` : ""}
-        <div class="proj-grid">${cards}</div>
+        <div class="proj-grid">
+          ${featuredCards}
+          ${regularList}
+        </div>
       </section>
     `;
   }).join("");
 
-  return sections || `<div class="muted">No projects yet.</div>`;
+  return sections;
 }
 
 // ====== MAIN ======
