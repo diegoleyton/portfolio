@@ -359,6 +359,14 @@ a:hover{
   color: var(--link) !important;
 }
 
+.section-title{
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
 /* PRINT version */
 @media print{
   a{
