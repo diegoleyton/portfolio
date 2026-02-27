@@ -331,4 +331,19 @@ li {
     width: 100%;
     margin: 0 0 10px 0 !important;
   }
+
+  /* Impact: override grid -> columns (must not be grid) */
+  .impact-section .grid-2{
+    display: block !important;
+    column-count: 2 !important;
+    column-gap: 12px !important;
+  }
+
+  .impact-section .impact-card{
+    display: inline-block !important;
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
 }
