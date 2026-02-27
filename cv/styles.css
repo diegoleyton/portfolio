@@ -162,6 +162,20 @@ li {
   margin: 14px 0;
 }
 
+.exp-group-title{
+  font-weight: 800;
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.exp-group-summary{
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
 /* PRINT */
 @media print{
   .noprint{ display:none !important; }
