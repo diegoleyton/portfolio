@@ -108,25 +108,29 @@ function renderBulletsSection(title, rows, field) {
 function renderImpact(title, rows) {
   if (!Array.isArray(rows) || !rows.length) return "";
 
-  // Group by category
   const byCat = groupBy(rows, r => String(r.category || "Impact").trim() || "Impact");
 
   const cards = [];
   for (const [cat, items] of byCat.entries()) {
     const sorted = items.slice().sort((a, b) => num(a.order) - num(b.order));
 
-    // Each row becomes a "paragraph block"
-    const blocks = sorted
-      .map(r => String(r.bullet || "").trim())
-      .filter(Boolean)
-      .flatMap(text => splitLines(text)) // split multi-line cell into multiple lines
-      .map(line => `<div class="impact-line">${esc(line)}</div>`)
-      .join("");
+    // Each row.bullet can contain multiple paragraphs separated by a blank line
+    const paragraphs = sorted
+      .map(r => String(r.bullet || ""))
+      .flatMap(splitIntoParagraphs)
+      .map(p => p.trim())
+      .filter(Boolean);
+
+    const html = paragraphs.map((p, idx) => {
+      const safe = normalizeLeadingBullet(p);
+      const sep = (idx < paragraphs.length - 1) ? `<div class="impact-divider"></div>` : "";
+      return `<p class="impact-p">${esc(safe)}</p>${sep}`;
+    }).join("");
 
     cards.push(`
-      <div class="card">
+      <div class="card impact-card">
         <div class="impact-cat">${esc(cat)}</div>
-        <div class="impact-body">${blocks}</div>
+        <div class="impact-body">${html}</div>
       </div>
     `);
   }
@@ -139,13 +143,14 @@ function renderImpact(title, rows) {
   `;
 }
 
-function splitLines(text) {
-  // Supports multi-line cells. Also supports lines starting with "-" or "•" by stripping them.
-  return String(text)
-    .split(/\r?\n+/)
-    .map(s => s.trim())
-    .filter(Boolean)
-    .map(s => s.replace(/^[-•]\s*/, ""));
+function splitIntoParagraphs(text) {
+  // Split by blank lines (two or more newlines)
+  return String(text).split(/\r?\n\s*\r?\n+/);
+}
+
+function normalizeLeadingBullet(line) {
+  // If you pasted lines starting with "-" or "•", strip that marker.
+  return String(line).replace(/^[-•]\s*/, "");
 }
 
 function renderExperience(title, roles, bullets) {
