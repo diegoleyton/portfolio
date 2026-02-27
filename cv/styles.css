@@ -326,3 +326,7 @@ li {
     color: inherit !important;
   }
 }
+.card .role:first-of-type{
+  border-top: none !important;
+  padding-top: 0 !important;
+}
