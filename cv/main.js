@@ -77,8 +77,8 @@ function renderAll(d) {
     if (key === "career_summary") blocks.push(renderBulletsSection("Career Summary", d.career_summary, "bullet"));
     if (key === "impact") blocks.push(renderImpact("Impact Summary", d.impact));
     if (key === "experience") blocks.push(renderExperience("Experience", d.experience, d.experience_bullets));
-    if (key === "projects") blocks.push(renderProjects("Projects", d.projects));
-    if (key === "skills") blocks.push(renderSkills("Technical Skills", d.skills));
+    if (key === "projects") blocks.push(renderProjects("Personal Projects", d.projects));
+    if (key === "skills") blocks.push(renderSkills("Skills", d.skills));
     if (key === "education") blocks.push(renderEducation("Education", d.education));
     if (key === "publications") blocks.push(renderPublications("Publications", d.publications));
     if (key === "languages") blocks.push(renderBulletsSection("Languages", (d.languages||[]).map(x=>({bullet:`${x.language} — ${x.level}`})), "bullet"));
