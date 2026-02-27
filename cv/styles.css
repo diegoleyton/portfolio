@@ -173,7 +173,6 @@ li {
   line-height: 1.55;
   margin-bottom: 14px;
   padding-bottom: 12px;
-  border-bottom: 1px solid var(--line);
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
@@ -325,8 +324,4 @@ li {
     text-decoration: none !important;
     color: inherit !important;
   }
-}
-.exp-roles .role:first-child{
-  border-top: none !important;
-  padding-top: 0 !important;
 }
