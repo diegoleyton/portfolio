@@ -273,10 +273,33 @@ li {
     padding: 0 !important;
   }
 
-  /* Avoid awkward splits */
-  section, .card, .role, .proj-role {
+  /* Default: allow natural pagination */
+  section{
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  /* Avoid breaking small, atomic blocks */
+  .card, .role, .proj-role{
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+
+  /* But allow Impact to split across pages (prevents big blank gaps) */
+  .impact-card, .impact-body{
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  h2{
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* If Impact is wrapped in .grid-2, also allow it */
+  .impact-card{
+    break-before: auto;
+    page-break-before: auto;
   }
 
   /* Cards */
@@ -329,5 +352,16 @@ li {
   a {
     text-decoration: none !important;
     color: inherit !important;
+  }
+
+  /* Make hero text use full printable width */
+  .hero, #hero,
+  .hero *{
+    max-width: none !important;
+  }
+
+  /* If you have a specific class that limits width, override it too */
+  .h-summary, .role-summary, .proj-role-sub, .impact-body, .impact-p{
+    max-width: none !important;
   }
 }
