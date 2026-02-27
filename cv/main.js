@@ -219,47 +219,73 @@ function renderProjects(title, rows) {
   const list = (rows || []).slice().sort((a,b)=>num(a.order)-num(b.order));
   if (!list.length) return "";
 
-  const groups = list.filter(r => String(r.kind || "").toLowerCase() === "group");
-  const items  = list.filter(r => String(r.kind || "").toLowerCase() !== "group");
+  let htmlOut = "";
+  let listOpen = false;
+  let hasAnyBlock = false;
 
-  // fallback: if no groups defined, show nothing or a simple list
-  if (!groups.length) {
-    return `
-      <section class="section">
-        <h2>${esc(title)}</h2>
-        <div class="card">
-          <ul>${items.map(i => `<li>${projectItemLine(i)}</li>`).join("")}</ul>
-        </div>
-      </section>
-    `;
+  for (const r of list) {
+    const isHeader = truthy(r.is_header);
+    const t = String(r.title || "").trim();
+    const d = String(r.description || "").trim();
+
+    if (isHeader) {
+      hasAnyBlock = true;
+
+      // close previous list + block
+      if (listOpen) {
+        htmlOut += `</ul>`;
+        listOpen = false;
+      }
+      if (htmlOut) htmlOut += `</div>`; // close previous proj-role
+
+      // start new block
+      htmlOut += `
+        <div class="proj-role">
+          <div class="proj-role-title">
+            <div class="proj-role-left">${htmlOrText(t)}</div>
+          </div>
+          ${d ? `<div class="proj-role-sub">${htmlOrText(d)}</div>` : ""}
+      `;
+
+      // open bullets list for this block
+      htmlOut += `<ul class="proj-bullets">`;
+      listOpen = true;
+      continue;
+    }
+
+    // non-header item row
+    // If user forgot a header, create an implicit one to avoid weird layout
+    if (!hasAnyBlock) {
+      htmlOut += `
+        <div class="proj-role">
+          <div class="proj-role-title">
+            <div class="proj-role-left">Projects</div>
+          </div>
+          <ul class="proj-bullets">
+      `;
+      listOpen = true;
+      hasAnyBlock = true;
+    } else if (!listOpen) {
+      // if we have a block but list was closed, reopen
+      htmlOut += `<ul class="proj-bullets">`;
+      listOpen = true;
+    }
+
+    // add bullet
+    if (t || d) {
+      htmlOut += `<li>${projectItemLine(r)}</li>`;
+    }
   }
 
-  const blocksHtml = groups.map(g => {
-    const gid = String(g.group_id || "").trim();
-    const blockItems = items
-      .filter(i => String(i.group_id || "").trim() === gid)
-      .sort((a,b)=>num(a.order)-num(b.order));
-
-    return `
-      <div class="proj-role">
-        <div class="proj-role-title">
-          <div class="proj-role-left">${htmlOrText(g.title)}</div>
-        </div>
-        ${g.description ? `<div class="proj-role-sub">${htmlOrText(g.description)}</div>` : ""}
-        ${blockItems.length ? `
-          <ul class="proj-bullets">
-            ${blockItems.map(i => `<li>${projectItemLine(i)}</li>`).join("")}
-          </ul>
-        ` : ""}
-      </div>
-    `;
-  }).join("");
+  // close last open tags
+  if (listOpen) htmlOut += `</ul>`;
+  if (htmlOut) htmlOut += `</div>`;
 
   return `
     <section class="section">
       <h2>${esc(title)}</h2>
       <div class="card">
-        ${blocksHtml}
+        ${htmlOut}
       </div>
     </section>
   `;
