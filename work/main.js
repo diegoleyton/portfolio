@@ -1,5 +1,5 @@
 // ====== CONFIG ======
-const DATA_URL = "https://script.google.com/macros/s/AKfycbzSE3uE_-l5qVDsj-KmYkuggIxjlPq5vuhzFvZL7RFYbVclHTgLyO5kTIv_sZscXMQLHg/exec"; 
+const DATA_URL = "https://script.google.com/macros/s/AKfycbzSE3uE_-l5qVDsj-KmYkuggIxjlPq5vuhzFvZL7RFYbVclHTgLyO5kTIv_sZscXMQLHg/exec";
 
 const $ = (sel) => document.querySelector(sel);
 
@@ -171,6 +171,14 @@ function renderProjectCard(p){
   const links = parseLinksCell(p.links);
   const img = normalizeImagePath(p.image);
 
+  const linksHtml = links.length
+    ? `<div class="proj-links">
+         ${links.map(l => `
+           <a class="linkbtn" href="${l.url}" target="_blank" rel="noopener noreferrer">${safeHTML(l.label)}</a>
+         `).join("")}
+       </div>`
+    : "";
+
   return `
     <div class="card proj-card">
       <div class="proj-head">
@@ -178,11 +186,7 @@ function renderProjectCard(p){
         <div class="proj-text">
           <div class="proj-title">${safeHTML(p.title || "")}</div>
           <div class="proj-desc">${safeHTML(p.description || "")}</div>
-          <div class="proj-links">
-            ${links.map(l => `
-              <a class="linkbtn" href="${l.url}" target="_blank">${safeHTML(l.label)}</a>
-            `).join("")}
-          </div>
+          ${linksHtml}
         </div>
       </div>
     </div>
@@ -211,9 +215,15 @@ function renderListProject(p){
   `;
 }
 
+// ✅ UPDATED: uses portfolio_categories.description
 function renderProjects(categories, projects){
   const cats = (categories || []).slice().sort((a,b)=>num(a.order)-num(b.order));
   const visibleProjects = (projects || []).filter(p => parseBool(p.visible));
+
+  // Map category -> row (so we can read description)
+  const catMap = new Map(
+    cats.map(r => [String(r.category || "").trim(), r])
+  );
 
   const byCat = groupBy(visibleProjects, p => String(p.category || "").trim());
 
@@ -221,6 +231,9 @@ function renderProjects(categories, projects){
     const catName = String(c.category || "").trim();
     const list = (byCat.get(catName) || []).slice().sort((a,b)=>num(a.order)-num(b.order));
     if (!list.length) return "";
+
+    const meta = catMap.get(catName) || {};
+    const catDesc = safeHTML(meta.description || "");
 
     const featured = list.filter(p => parseBool(p.featured));
     const regular = list.filter(p => !parseBool(p.featured));
@@ -238,6 +251,7 @@ function renderProjects(categories, projects){
     return `
       <section class="section">
         <h3 class="cat-title">${safeHTML(catName)}</h3>
+        ${catDesc ? `<div class="cat-desc">${catDesc}</div>` : ""}
         <div class="proj-grid">
           ${featuredCards}
           ${regularList}
