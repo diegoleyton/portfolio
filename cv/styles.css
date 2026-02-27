@@ -256,6 +256,8 @@ li {
     background: white !important;
   }
 
+  .noprint{ display:none !important; }
+
   /* Remove container width constraints */
   .container {
     max-width: 100% !important;
