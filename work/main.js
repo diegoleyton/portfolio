@@ -189,18 +189,24 @@ function renderProjectCard(p){
   `;
 }
 
-function renderMiniProject(p){
+function renderListProject(p){
   const links = parseLinksCell(p.links);
+
+  const linksHtml = links.length
+    ? `<div class="proj-links inline">
+         ${links.map(l => `
+           <a class="chiplink" href="${l.url}" target="_blank" rel="noopener noreferrer">
+             ${safeHTML(l.label)}
+           </a>
+         `).join("")}
+       </div>`
+    : "";
+
   return `
-    <div class="proj-mini">
-      <div class="proj-mini-left">
-        <div class="proj-mini-title">${safeHTML(p.title)}</div>
-      </div>
-      <div class="proj-mini-links">
-        ${links.map(l => `
-          <a href="${l.url}" target="_blank">${safeHTML(l.label)}</a>
-        `).join(" • ")}
-      </div>
+    <div class="proj-row">
+      <div class="proj-row-title">${safeHTML(p.title || "")}</div>
+      <div class="proj-row-desc">${safeHTML(p.description || "")}</div>
+      ${linksHtml}
     </div>
   `;
 }
@@ -223,11 +229,8 @@ function renderProjects(categories, projects){
 
     const regularList = regular.length
       ? `
-        <div class="card proj-group">
-          <div class="proj-group-title">More Projects</div>
-          <div class="proj-mini-list">
-            ${regular.map(renderMiniProject).join("")}
-          </div>
+        <div class="card proj-list">
+          ${regular.map(renderListProject).join("")}
         </div>
       `
       : "";
