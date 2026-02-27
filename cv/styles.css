@@ -239,7 +239,7 @@ li {
 }
 
 .proj-item-desc{
-  color: var(--muted);
+  color: inherit;
   font-weight: 400;
 }
 
