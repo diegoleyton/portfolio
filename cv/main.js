@@ -218,24 +218,56 @@ function renderExperience(title, roles, bullets) {
 function renderProjects(title, rows) {
   const list = (rows || []).slice().sort((a,b)=>num(a.order)-num(b.order));
   if (!list.length) return "";
-  const cards = list.map(p => {
-    const tags = String(p.tags || "").split(",").map(t=>t.trim()).filter(Boolean);
-    return `
-      <div class="card">
-        <div style="display:flex; justify-content:space-between; gap:12px; align-items:baseline">
-          <div style="font-weight:700">${esc(p.title || "")}</div>
-          ${p.url ? link(p.url, shortUrl(p.url)) : ""}
-        </div>
-        <div class="muted" style="margin-top:10px; line-height:1.5">${esc(p.description || "")}</div>
-        ${tags.length ? `<div class="chips">${tags.map(t=>`<div class="chip">${esc(t)}</div>`).join("")}</div>` : ""}
-      </div>
-    `;
-  }).join("");
+
+  let html = "";
+  let inBlock = false;
+
+  for (const r of list) {
+    const isHeader = truthy(r.is_header);
+    const t = String(r.title || "").trim();
+    const d = String(r.description || "").trim();
+    const u = String(r.url || "").trim();
+
+    if (isHeader) {
+      if (inBlock) html += `</ul></div>`; // close previous block
+      inBlock = true;
+
+      html += `
+        <div class="proj-block">
+          <div class="proj-subtitle">${t}</div>
+          ${d ? `<div class="proj-intro">${d}</div>` : ""}
+          <ul class="proj-list">
+      `;
+      continue;
+    }
+
+    // bullet rows
+    if (!inBlock) {
+      // fallback: if user forgot a header, create an implicit block
+      inBlock = true;
+      html += `
+        <div class="proj-block">
+          <div class="proj-subtitle">Projects</div>
+          <ul class="proj-list">
+      `;
+    }
+
+    const label = u ? `<a href="${u}" target="_blank" rel="noreferrer">${t}</a>` : t;
+    const tail = d ? ` ${d}` : "";
+
+    if (t || d) {
+      html += `<li><span class="proj-item-title">${label}</span>${tail ? `<span class="proj-item-desc">${tail}</span>` : ""}</li>`;
+    }
+  }
+
+  if (inBlock) html += `</ul></div>`; // close last block
 
   return `
     <section class="section">
       <h2>${esc(title)}</h2>
-      <div style="display:flex; flex-direction:column; gap:14px">${cards}</div>
+      <div class="card proj-card">
+        ${html}
+      </div>
     </section>
   `;
 }
