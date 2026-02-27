@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd cv
-          npm ci
+          npm install
 
       - name: Install Playwright browsers
         run: |
