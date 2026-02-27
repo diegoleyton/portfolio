@@ -304,6 +304,48 @@ a:hover{
   padding: 22px 0 40px;
 }
 
+/* Group container */
+.proj-group{
+  padding: 18px;
+  background: rgba(255,255,255,0.02);
+}
+
+.proj-group-title{
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: var(--muted);
+  letter-spacing: .04em;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+/* Mini projects */
+.proj-mini{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  gap: 12px;
+}
+
+.proj-mini:first-child{
+  border-top: none;
+}
+
+.proj-mini-title{
+  font-weight: 650;
+}
+
+.proj-mini-links a{
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.proj-mini-links a:hover{
+  text-decoration: underline;
+}
+
 /* =========================
    PRINT — keep clean and readable
    ========================= */
