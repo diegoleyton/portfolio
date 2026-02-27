@@ -245,31 +245,78 @@ li {
 
 /* PRINT */
 @media print {
-  /* Force 2 columns for grids */
-  .grid-2{
+
+  /* Page setup */
+  @page {
+    size: Letter;
+    margin: 8mm;   /* 8–10mm funciona bien en Chrome */
+  }
+
+  html, body {
+    background: white !important;
+  }
+
+  /* Remove container width constraints */
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Keep sections tight and avoid weird breaks */
+  section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Cards */
+  .card {
+    padding: 12px !important;
+    border: 1px solid #e5e5e5 !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* FORCE 2-column grids in print */
+  .grid-2 {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
     gap: 10px !important;
   }
 
-  /* Let grid children shrink (very important) */
-  .grid-2 > *{
+  /* Allow grid children to shrink (CRITICAL for Chrome) */
+  .grid-2 > * {
     min-width: 0 !important;
   }
 
-  /* Cards shrink nicely on print */
-  .card{
-    padding: 12px !important;
-  }
-
-  /* Chips wrap and shrink so 2 columns can fit */
-  .chips{
+  /* Chips layout fix */
+  .chips {
     gap: 6px !important;
   }
-  .chip{
+
+  .chip {
     padding: 4px 8px !important;
     font-size: 12px !important;
-    white-space: normal !important;   /* allow wrap inside chip */
+    white-space: normal !important;   /* allow wrapping */
     max-width: 100% !important;
+  }
+
+  /* Typography slightly tighter for PDF */
+  h2 {
+    margin-bottom: 8px !important;
+  }
+
+  .proj-role {
+    padding: 12px 0 !important;
+  }
+
+  .proj-bullets li {
+    margin: 6px 0 !important;
+  }
+
+  /* Remove hover styles / links decoration in print */
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
   }
 }
