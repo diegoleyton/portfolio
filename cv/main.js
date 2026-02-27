@@ -136,7 +136,7 @@ function renderImpact(title, rows) {
   }
 
   return `
-    <section class="section">
+    <section class="section impact-section">
       <h2>${esc(title)}</h2>
       <div class="grid-2">${cards.join("")}</div>
     </section>
