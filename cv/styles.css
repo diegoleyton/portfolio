@@ -5,9 +5,14 @@
   --line: rgba(11,15,25,.12);
   --chip: rgba(11,15,25,.06);
   --card: rgba(11,15,25,.03);
+
+  /* Links */
+  --link: #1a56db;
+  --link-soft: rgba(26,86,219,.35);
 }
 
 *{ box-sizing:border-box; }
+
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
@@ -15,8 +20,13 @@ body{
   background:#fff;
 }
 
-.container{ max-width:var(--max); margin:0 auto; padding: 26px 18px; }
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding: 26px 18px;
+}
 
+/* Top bar */
 .topbar{
   position: sticky;
   top: 0;
@@ -25,18 +35,26 @@ body{
   border-bottom: 1px solid var(--line);
   z-index: 10;
 }
+
 .topbar-inner{
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap: 12px;
 }
-.left{ display:flex; align-items:baseline; gap:10px; }
+
+.left{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+}
+
 .brand{
   font-weight: 700;
   text-decoration:none;
   color: var(--text);
 }
+
 .sep{ color: var(--muted); }
 
 .btn{
@@ -47,18 +65,46 @@ body{
   cursor:pointer;
 }
 
+/* Hero */
 .hero{
   padding: 18px 0 8px;
   border-bottom: 1px solid var(--line);
   margin-bottom: 18px;
 }
-.h-name{ font-size: 36px; font-weight: 800; margin:0; letter-spacing:-.4px; }
-.h-headline{ margin:10px 0 0; font-size: 16px; color: var(--muted); line-height:1.55; max-width: 70ch; }
-.h-meta{ margin-top: 12px; display:flex; flex-wrap:wrap; gap:10px; color: var(--muted); font-size: 14px; }
-.h-meta a{ color: inherit; text-decoration:none; border-bottom: 1px solid var(--line); }
-.h-summary{ margin-top: 14px; color: var(--muted); line-height: 1.55; max-width: 78ch; }
+
+.h-name{
+  font-size: 36px;
+  font-weight: 800;
+  margin:0;
+  letter-spacing:-.4px;
+}
+
+.h-headline{
+  margin:10px 0 0;
+  font-size: 16px;
+  color: var(--muted);
+  line-height:1.55;
+  max-width: 70ch;
+}
+
+.h-meta{
+  margin-top: 12px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.h-summary{
+  margin-top: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+  max-width: 78ch;
+}
 .h-summary > div + div{ margin-top: 10px; }
 
+/* Status */
 .status{
   border: 1px solid var(--line);
   background: var(--card);
@@ -69,7 +115,9 @@ body{
   font-size: 14px;
 }
 
+/* Sections */
 .section{ margin: 24px 0; }
+
 .section h2{
   font-size: 13px;
   letter-spacing: .14em;
@@ -78,6 +126,7 @@ body{
   margin: 0 0 12px;
 }
 
+/* Cards / grid */
 .card{
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -89,15 +138,22 @@ body{
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
+
 @media (max-width: 820px){
   .grid-2{ grid-template-columns: 1fr; }
 }
 
+/* Lists */
 ul{ margin: 10px 0 0; padding-left: 18px; }
 li{ margin: 7px 0; line-height: 1.5; }
 
-.role{ padding: 12px 0; border-top: 1px solid var(--line); }
+/* Experience */
+.role{
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
 .role:first-child{ border-top:none; padding-top: 0; }
+
 .role-title{
   display:flex;
   justify-content:space-between;
@@ -105,12 +161,33 @@ li{ margin: 7px 0; line-height: 1.5; }
   align-items: baseline;
 }
 .role-title .left{ font-weight: 700; }
-.role-title .right{ color: var(--muted); font-size: 13px; white-space: nowrap; }
-.role-sub{ margin-top: 6px; color: var(--muted); font-size: 14px; line-height:1.45; }
-.role-sub a{ color: inherit; text-decoration:none; border-bottom:1px solid var(--line); }
-.role-summary{ margin-top: 10px; color: var(--muted); line-height: 1.5; }
+.role-title .right{
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
 
-.chips{ display:flex; flex-wrap:wrap; gap: 8px; margin-top: 12px; }
+.role-sub{
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height:1.45;
+}
+
+.role-summary{
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Skills chips */
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
 .chip{
   background: var(--chip);
   border: 1px solid var(--line);
@@ -121,29 +198,53 @@ li{ margin: 7px 0; line-height: 1.5; }
 }
 
 .muted{ color: var(--muted); }
-.footer{ border-top: 1px solid var(--line); margin-top: 22px; padding-top: 14px; }
 
-.card,
-.role-summary,
-.h-summary,
-li {
+.footer{
+  border-top: 1px solid var(--line);
+  margin-top: 22px;
+  padding-top: 14px;
+}
+
+/* Justify (your existing style) */
+.card, .role-summary, .h-summary, li {
   text-align: justify;
   text-justify: inter-word;
 }
 
-/* Impact section */
+/* -------------------------
+   Links (SCREEN)
+   ------------------------- */
 
-.impact-card{
-  padding: 18px;
+a{
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid var(--link-soft);
+}
+a:hover{
+  border-bottom-color: var(--link);
 }
 
+/* Previously forced inherit — override them cleanly */
+.h-meta a,
+.role-sub a,
+.proj-item-title a{
+  color: var(--link);
+  border-bottom: 1px solid var(--link-soft);
+}
+
+/* -------------------------
+   Impact
+   ------------------------- */
+
+.impact-card{ padding: 18px; }
+
 .impact-cat{
-  font-size: 1em;          
-  font-weight: 700;        
+  font-size: 14px;      /* normal size */
+  font-weight: 700;     /* bold only */
   letter-spacing: 0;
   margin-bottom: 6px;
-  border-bottom:1px solid #eee;
-  padding-bottom:4px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
 }
 
 .impact-body{
@@ -164,14 +265,7 @@ li {
   margin: 14px 0;
 }
 
-/* Force Impact box titles to be normal-sized */
-.impact-card .impact-cat{
-  font-size: 13px !important;   /* o 13px si lo quieres más sutil */
-  font-weight: 700 !important;
-  line-height: 1.25 !important;
-  letter-spacing: 0 !important;
-}
-
+/* Experience group title/summary */
 .exp-group-title{
   font-weight: 800;
   font-size: 19px;
@@ -188,7 +282,9 @@ li {
   hyphens: auto;
 }
 
-/* Projects styled like Experience (hierarchy + separators) */
+/* -------------------------
+   Projects
+   ------------------------- */
 
 .proj-role{
   padding: 14px 0;
@@ -223,7 +319,6 @@ li {
   hyphens: auto;
 }
 
-/* bullets */
 .proj-bullets{
   margin-top: 12px;
   padding-left: 22px;
@@ -238,13 +333,7 @@ li {
 }
 
 .proj-item-title{
-  font-weight: 800;          /* stronger */
-}
-
-.proj-item-title a{
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid var(--line);
+  font-weight: 800;
 }
 
 .proj-item-desc{
@@ -252,36 +341,27 @@ li {
   font-weight: 400;
 }
 
-/* links */
-a{
-  color:#1f4fd8;          /* azul profesional, no saturado */
-  text-decoration:none;
-  border-bottom:1px solid rgba(31,79,216,.35);
-}
+/* =========================================================
+   PRINT
+========================================================= */
 
-a:hover{
-  border-bottom-color:#1f4fd8;
-}
-
-a[href^="http"]::after{
-  content:" ↗";
-  font-size:.85em;
-  opacity:.6;
-}
-
-/* PRINT */
 @media print {
 
   @page { size: Letter; margin: 8mm; }
 
   html, body { background: white !important; }
 
-  /* Font scaling (only affects rem/em; safe to keep) */
+  /* Font scaling (mostly affects rem/em; safe to keep) */
   html { font-size: 11px !important; }
   body { font-size: 11px !important; line-height: 1.45 !important; }
 
   h1 { font-size: 20px !important; }
-  h2 { font-size: 14px !important; margin: 0 0 6px 0 !important; break-after: avoid; page-break-after: avoid; }
+  h2 {
+    font-size: 14px !important;
+    margin: 0 0 6px 0 !important;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
   h3 { font-size: 13px !important; }
 
   /* Hide UI */
@@ -294,7 +374,7 @@ a[href^="http"]::after{
   /* Default pagination */
   section { break-inside: auto; page-break-inside: auto; }
 
-  /* Avoid breaking small, atomic blocks */
+  /* Avoid breaking small blocks */
   .card, .role, .proj-role { break-inside: avoid; page-break-inside: avoid; }
 
   /* Cards */
@@ -336,36 +416,18 @@ a[href^="http"]::after{
     padding-bottom: 0 !important;
   }
 
-  /* Links look like text */
-  a{
-    color:#1a56db !important;
-    text-decoration:none !important;
-    border-bottom:1px solid #1a56db !important;
-  }
-  
-  a::after{ display:none; }
-
   /* Hero uses full width */
   .hero, #hero, .hero * { max-width: none !important; }
   .h-summary, .role-summary, .proj-role-sub, .impact-body, .impact-p { max-width: none !important; }
 
-  /* ---------- Impact: use multicolumn instead of grid for print ---------- */
-  .impact-section .grid-2{
-    display: block !important;
-    column-count: 2;
-    column-gap: 12px;
+  /* Links visible in PDF */
+  a{
+    color: var(--link) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid var(--link) !important;
   }
 
-  /* Cards should stay intact inside columns */
-  .impact-section .impact-card{
-    break-inside: avoid;
-    page-break-inside: avoid;
-    display: inline-block;
-    width: 100%;
-    margin: 0 0 10px 0 !important;
-  }
-
-  /* Impact: override grid -> columns (must not be grid) */
+  /* Impact: 2 columns in print using multicolumn (stable pagination) */
   .impact-section .grid-2{
     display: block !important;
     column-count: 2 !important;
@@ -380,13 +442,9 @@ a[href^="http"]::after{
     page-break-inside: avoid !important;
   }
 
-  .impact-cat{
-    font-size: 1em !important;
-    font-weight: 700 !important;
-  }
-
+  /* Impact title size in print */
   .impact-card .impact-cat{
-    font-size: 11px !important; /* print un poco más compacto */
+    font-size: 12px !important;
     font-weight: 700 !important;
     line-height: 1.2 !important;
   }
