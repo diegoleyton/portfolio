@@ -219,9 +219,9 @@ function renderProjects(title, rows) {
   const list = (rows || []).slice().sort((a,b)=>num(a.order)-num(b.order));
   if (!list.length) return "";
 
-  let htmlOut = "";
-  let listOpen = false;
-  let hasAnyBlock = false;
+  // Build blocks: [{header:{title,desc}, items:[...]}, ...]
+  const blocks = [];
+  let current = null;
 
   for (const r of list) {
     const isHeader = truthy(r.is_header);
@@ -229,63 +229,45 @@ function renderProjects(title, rows) {
     const d = String(r.description || "").trim();
 
     if (isHeader) {
-      hasAnyBlock = true;
-
-      // close previous list + block
-      if (listOpen) {
-        htmlOut += `</ul>`;
-        listOpen = false;
-      }
-      if (htmlOut) htmlOut += `</div>`; // close previous proj-role
-
-      // start new block
-      htmlOut += `
-        <div class="proj-role">
-          <div class="proj-role-title">
-            <div class="proj-role-left">${htmlOrText(t)}</div>
-          </div>
-          ${d ? `<div class="proj-role-sub">${htmlOrText(d)}</div>` : ""}
-      `;
-
-      // open bullets list for this block
-      htmlOut += `<ul class="proj-bullets">`;
-      listOpen = true;
+      current = { header: { title: t, desc: d }, items: [] };
+      blocks.push(current);
       continue;
     }
 
-    // non-header item row
-    // If user forgot a header, create an implicit one to avoid weird layout
-    if (!hasAnyBlock) {
-      htmlOut += `
-        <div class="proj-role">
-          <div class="proj-role-title">
-            <div class="proj-role-left">Projects</div>
-          </div>
-          <ul class="proj-bullets">
-      `;
-      listOpen = true;
-      hasAnyBlock = true;
-    } else if (!listOpen) {
-      // if we have a block but list was closed, reopen
-      htmlOut += `<ul class="proj-bullets">`;
-      listOpen = true;
+    if (!current) {
+      // If someone forgot a header, create an implicit one
+      current = { header: { title: "Projects", desc: "" }, items: [] };
+      blocks.push(current);
     }
 
-    // add bullet
-    if (t || d) {
-      htmlOut += `<li>${projectItemLine(r)}</li>`;
-    }
+    current.items.push(r);
   }
 
-  // close last open tags
-  if (listOpen) htmlOut += `</ul>`;
-  if (htmlOut) htmlOut += `</div>`;
+  const blocksHtml = blocks.map((b, idx) => {
+    const h = b.header || { title: "", desc: "" };
+    const items = b.items || [];
+
+    return `
+      <div class="proj-role">
+        <div class="proj-role-title">
+          <div class="proj-role-left">${htmlOrText(h.title)}</div>
+        </div>
+        ${h.desc ? `<div class="proj-role-sub">${htmlOrText(h.desc)}</div>` : ""}
+
+        ${items.length ? `
+          <ul class="proj-bullets">
+            ${items.map(i => `<li>${projectItemLine(i)}</li>`).join("")}
+          </ul>
+        ` : ""}
+      </div>
+    `;
+  }).join("");
 
   return `
     <section class="section">
       <h2>${esc(title)}</h2>
       <div class="card">
-        ${htmlOut}
+        ${blocksHtml}
       </div>
     </section>
   `;
@@ -296,11 +278,8 @@ function projectItemLine(i) {
   let d = String(i.description || "").trim();
   const u = String(i.url || "").trim();
 
-  // If description starts with the title (common after copy/paste), remove the duplicate.
-  // Example: title="Marmilo" description="Marmilo using interactive..."
   if (t && d.toLowerCase().startsWith(t.toLowerCase())) {
-    d = d.slice(t.length).trim();
-    d = d.replace(/^[:\-–—]\s*/, ""); // remove leading punctuation
+    d = d.slice(t.length).trim().replace(/^[:\-–—]\s*/, "");
   }
 
   const titleHtml = u
