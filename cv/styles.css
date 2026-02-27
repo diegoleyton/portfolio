@@ -252,4 +252,21 @@ li {
   .role{ break-inside: avoid; }
   .card{ border: 1px solid #ddd; }
   @page{ margin: 14mm; }
+  /* Force 2-column layout in PDF/print */
+  .grid-2{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* Avoid cards breaking in weird places */
+  .card{
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Make sure grid items don't expand weirdly */
+  .grid-2 > *{
+    min-width: 0;
+  }
 }
