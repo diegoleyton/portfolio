@@ -251,7 +251,7 @@ li {
   .section{ break-inside: avoid; }
   .role{ break-inside: avoid; }
   .card{ border: 1px solid #ddd; }
-  @page{ margin: 14mm; }
+  @page{ margin: 10mm; }
   /* Force 2-column layout in PDF/print */
   .grid-2{
     display: grid !important;
