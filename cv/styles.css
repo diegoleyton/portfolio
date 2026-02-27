@@ -123,6 +123,14 @@ li{ margin: 7px 0; line-height: 1.5; }
 .muted{ color: var(--muted); }
 .footer{ border-top: 1px solid var(--line); margin-top: 22px; padding-top: 14px; }
 
+.card,
+.role-summary,
+.h-summary,
+li {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 /* PRINT */
 @media print{
   .noprint{ display:none !important; }
