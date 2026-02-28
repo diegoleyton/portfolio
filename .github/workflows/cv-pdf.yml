@@ -1,25 +1,24 @@
-name: Build CV PDF
+name: Build CV PDF + Shared JSON
 
 on:
   push:
     branches: [ main ]
     paths:
       - "cv/**"
+      - "work/**"
       - ".github/workflows/cv-pdf.yml"
+
   workflow_dispatch:
-  # opcional: regenere aunque solo cambie el Sheet (1 vez al día)
-  # schedule:
-  #   - cron: "0 14 * * *"   # 14:00 UTC ~ 6am PT
 
 permissions:
   contents: write
 
 concurrency:
-  group: cv-pdf
-  cancel-in-progress: false
+  group: cv-build
+  cancel-in-progress: true
 
 jobs:
-  build-pdf:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,16 +30,16 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install dependencies
+      - name: Install CV dependencies
         run: |
           cd cv
           npm install
 
-      - name: Cache Playwright browsers
-        uses: actions/cache@v4
-        with:
-          path: /home/runner/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('cv/package-lock.json', 'cv/package.json') }}
+      - name: Generate shared data.json
+        env:
+          DATA_URL: "https://script.google.com/macros/s/AKfycbzSE3uE_-l5qVDsj-KmYkuggIxjlPq5vuhzFvZL7RFYbVclHTgLyO5kTIv_sZscXMQLHg/exec"
+        run: |
+          node cv/scripts/fetch-data.mjs
 
       - name: Install Playwright browsers
         run: |
@@ -52,10 +51,12 @@ jobs:
           cd cv
           node scripts/generate-pdf.mjs
 
-      - name: Commit PDF back to repo
+      - name: Commit JSON + PDF back to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add cv/Diego_Leyton_CV.pdf
-          git commit -m "Update CV PDF" || echo "No changes to commit"
+
+          git add data/data.json cv/Diego_Leyton_CV.pdf
+
+          git commit -m "Update CV PDF and data.json" || echo "No changes to commit"
           git push
