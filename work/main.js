@@ -106,6 +106,7 @@ function renderHero(profile){
 
   const contactBits = [
     profile.linkedin_url ? `<a href="${profile.linkedin_url}">LinkedIn</a>` : "",
+    profile.reference_url ? `<a href="${profile.reference_url}">Reference Letter</a>` : "",
     showEmail && profile.email ? `<a href="mailto:${profile.email}">${profile.email}</a>` : "",
     showPhone && profile.phone ? `${profile.phone}` : "",
     profile.location ? `${profile.location}` : ""
