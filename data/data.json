@@ -1,0 +1,791 @@
+{
+  "profile": {
+    "full_name": "Diego Leyton",
+    "headline": "Senior Software Engineer and Creative Technologist",
+    "location": "Concord, CA, USA",
+    "phone": "+1(415) 2995023",
+    "email": "dleytons@gmail.com",
+    "linkedin_url": "https://www.linkedin.com/in/dieleyton",
+    "portfolio_url": "https://diegoleyton.github.io/portfolio/work/",
+    "reference_url": "https://github.com/diegoleyton/portfolio/blob/main/cv/Diego_Leyton_Refefence_Letter.pdf",
+    "show_phone": false,
+    "show_email": true,
+    "summary_1": "<b>Senior Software Engineer and Creative Technologist</b> driven by the idea that technology can spark curiosity and make learning joyful. With experience in game development, virtual/augmented reality, and interactive technologies, I’ve spent my career building systems that connect creativity with innovation.",
+    "summary_2": "At <b>Meta, I’ve helped shape the metaverse</b> — as an Engineering Manager and Technical Lead — and I’m passionate about using these skills to create meaningful experiences."
+  },
+  "sections": [
+    {
+      "key": "career_summary",
+      "title": "Career Summary",
+      "order": 1,
+      "enabled": true
+    },
+    {
+      "key": "impact",
+      "title": "Impact Summary",
+      "order": 2,
+      "enabled": true
+    },
+    {
+      "key": "experience",
+      "title": "Professional Experience",
+      "order": 3,
+      "enabled": true
+    },
+    {
+      "key": "projects",
+      "title": "Personal Projects",
+      "order": 4,
+      "enabled": true
+    },
+    {
+      "key": "skills",
+      "title": "Tech / Platforms / Education",
+      "order": 5,
+      "enabled": true
+    },
+    {
+      "key": "education",
+      "title": "Education",
+      "order": 6,
+      "enabled": true
+    },
+    {
+      "key": "publications",
+      "title": "Publications",
+      "order": 7,
+      "enabled": true
+    },
+    {
+      "key": "languages",
+      "title": "Languages",
+      "order": 8,
+      "enabled": true
+    }
+  ],
+  "career_summary": [
+    {
+      "order": 1,
+      "bullet": "<b>14+ years of experience in software engineering</b>, including <b>7 years at Meta (Facebook)</b> — over 2 years as <b>Engineering Manager and currently Tech Lead</b> in Horizon Worlds, <b>building the Metaverse.</b>"
+    },
+    {
+      "order": 2,
+      "bullet": "Previously worked at <b>Meta Company (AR startup) for 2 years</b> as Lead Engineer, developing <b>Augmented Reality</b> collaboration technologies."
+    },
+    {
+      "order": 3,
+      "bullet": "<b>5 years in the game industry</b> (DeNA, Atakama Labs), leading the development of mobile games released worldwide on Google Play, App Store and Amazon Store."
+    },
+    {
+      "order": 4,
+      "bullet": "<b>Passionate about interactive technologies</b> and education through technology, designing self-directed learning tools used daily by my children."
+    }
+  ],
+  "impact": [
+    {
+      "order": 1,
+      "category": "Product Development",
+      "bullet": "<b>Led and contributed</b> to multiple high-impact applications used by millions of users — including <b>Meta’s Horizon Worlds</b> and several mobile games"
+    },
+    {
+      "order": 2,
+      "category": "Engineering Excellence",
+      "bullet": "<b>Drove a cross-team test coverage initiative (9 teams, ~90 engineers)</b>, raising automation <b>from 50% to 90%</b>, reducing regressions, and improving release stability."
+    },
+    {
+      "order": 3,
+      "category": "System Migration",
+      "bullet": "As Engineering Manager at Meta, <b>led the migration of Creation Tools architecture</b>, enabling faster iteration and better user experiences and performance.\n\nAs Tech Lead at Meta, <b>led the organization-wide migration of the UI system</b>, improving maintainability and cross-platform consistency."
+    },
+    {
+      "order": 4,
+      "category": "AR Innovation",
+      "bullet": "<b>Invented the smartphone-to-AR interaction technique</b>, later <b>patented and widely showcased</b> in product demos and investor presentations, which was instrumental in securing additional investor funding. <b>Winner of the AWE 2017 Best Presentation Award</b> for Augmented Reality."
+    },
+    {
+      "order": 5,
+      "category": "Architecture Design",
+      "bullet": "Created the MVCB <b>architecture pattern, adopted across AR projects</b> for modularity and engine independence."
+    },
+    {
+      "order": 6,
+      "category": "Educational Technology",
+      "bullet": "<b>Created personal learning tools</b> for my children that transformed daily routines — from understanding math to brushing teeth — into playful, self-motivated activities, reflecting my belief that technology can nurture curiosity and autonomy from an early age."
+    }
+  ],
+  "experience": [
+    {
+      "id": "meta_tl_2023",
+      "order": 1,
+      "company": "Meta (Facebook)",
+      "company_group": "Meta (Facebook)",
+      "company_url": "",
+      "location": "Menlo Park, CA, USA",
+      "role_title": "Senior Software Engineer & Tech Lead (Horizon Worlds)",
+      "start": "2023-08-01T07:00:00.000Z",
+      "end": "",
+      "summary": "",
+      "group_summary": "<b>Tech Lead / Engineering Manager</b> in <a href=\"https://www.youtube.com/watch?v=02kCEurWkqU\">Horizon Worlds</a> building the <a href=\"https://www.youtube.com/watch?v=Uvufun6xer8\">Metaverse</a>"
+    },
+    {
+      "id": "meta_em_2021",
+      "order": 2,
+      "company": "Meta (Facebook)",
+      "company_group": "Meta (Facebook)",
+      "company_url": "",
+      "location": "Menlo Park, CA, USA",
+      "role_title": "Engineering Manager (Horizon Worlds Creation Tools)",
+      "start": "2021-01-01T08:00:00.000Z",
+      "end": "2023-08-01T07:00:00.000Z",
+      "summary": "",
+      "group_summary": ""
+    },
+    {
+      "id": "meta_tl_2018",
+      "order": 3,
+      "company": "Meta (Facebook)",
+      "company_group": "Meta (Facebook)",
+      "company_url": "",
+      "location": "Menlo Park, CA, USA",
+      "role_title": "Senior Software Engineer / Tech Lead",
+      "start": "2018-12-01T08:00:00.000Z",
+      "end": "2021-01-01T08:00:00.000Z",
+      "summary": "",
+      "group_summary": ""
+    },
+    {
+      "id": "meta_company_ar_2016",
+      "order": 4,
+      "company": "Meta Company (AR)",
+      "company_group": "Meta Company (AR)",
+      "company_url": "",
+      "location": "San Mateo, CA, USA",
+      "role_title": "Lead Engineer (Augmented Reality)",
+      "start": "2016-12-01T08:00:00.000Z",
+      "end": "2018-09-01T07:00:00.000Z",
+      "summary": "",
+      "group_summary": ""
+    },
+    {
+      "id": "dena_sf_2015",
+      "order": 5,
+      "company": "DeNA Studios San Francisco",
+      "company_group": "DeNA Studios",
+      "company_url": "",
+      "location": "San Francisco, CA, USA",
+      "role_title": "Technical Lead Engineer",
+      "start": "2015-06-01T07:00:00.000Z",
+      "end": "2016-12-01T08:00:00.000Z",
+      "summary": "",
+      "group_summary": "Worked developing <b>video games as a Technical Lead Engineer</b>."
+    },
+    {
+      "id": "dena_ca_2014",
+      "order": 6,
+      "company": "DeNA Studios Canada",
+      "company_group": "DeNA Studios",
+      "company_url": "",
+      "location": "Vancouver, BC, Canada",
+      "role_title": "Senior Software Engineer",
+      "start": "2014-02-01T08:00:00.000Z",
+      "end": "2015-06-01T07:00:00.000Z",
+      "summary": "",
+      "group_summary": ""
+    },
+    {
+      "id": "atakama_2011",
+      "order": 7,
+      "company": "Atakama Labs (DeNA Studios Santiago)",
+      "company_group": "DeNA Studios",
+      "company_url": "",
+      "location": "Santiago, Chile",
+      "role_title": "Software Engineer → Lead Engineer → Project Manager",
+      "start": "2011-06-01T07:00:00.000Z",
+      "end": "2014-02-01T08:00:00.000Z",
+      "summary": "",
+      "group_summary": ""
+    }
+  ],
+  "experience_bullets": [
+    {
+      "role_id": "meta_tl_2023",
+      "order": 1,
+      "bullet": "<b>Led performance tools team</b> to enable creators to evaluate and improve runtime efficiency across Horizon platforms.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_tl_2023",
+      "order": 2,
+      "bullet": "<b>Led a pillar-wide test coverage initiative across 9 teams (~90 engineers)</b>, increasing automated test coverage from 50% to 90%, resulting in a measurable reduction in regressions and higher release stability.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_em_2021",
+      "order": 1,
+      "bullet": "<b>Managed Horizon Worlds team (10+ engineers)</b>, providing <a href=\"https://www.youtube.com/watch?v=HXQR5ZCF_4I\">Creation Tools</a> to users so they can build and share their immersive experiences.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_em_2021",
+      "order": 2,
+      "bullet": "<b>Led the migration of Horizon Worlds CreationTools architecture</b>, enabling faster iteration and better creator experiences.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_tl_2018",
+      "order": 1,
+      "bullet": "<b>Tech Lead</b> of the team building the <b>Creation Tools</b> of Horizon Worlds",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_tl_2018",
+      "order": 2,
+      "bullet": "<b>Tech Lead building the VR UI library</b> for Horizon Worlds.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_tl_2018",
+      "order": 3,
+      "bullet": "Senior Software Engineer <b>building the first version of Horizon Worlds</b>.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_company_ar_2016",
+      "order": 1,
+      "bullet": "<b>Led Collaboration in Augmented Reality</b>: With this feature, users can simultaneously interact with holograms in the AR workspace.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_company_ar_2016",
+      "order": 2,
+      "bullet": "<b>Created the org widely used architecture pattern MVCB</b> based on MVC, to work with different game and graphical engines.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_company_ar_2016",
+      "order": 3,
+      "bullet": "<b>Meta Cloud Infrastructure (GoLang)</b>: Worked as a backend and frontend software engineer developing the Meta Cloud infrastructure and micro-services.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_company_ar_2016",
+      "order": 4,
+      "bullet": "<b>Inventor of the interaction with Smart Phones in Augmented Reality</b>. This is an intuitive way to grab content from a Smart Phone, just using the hands (patented). Videos: <a href=\"https://www.youtube.com/watch?v=elFWSYvnJ0U\">Collaboration in AR</a> and <a href=\"https://www.youtube.com/watch?v=0A1ucKzKqMk\">Importing 3D Models</a>.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_company_ar_2016",
+      "order": 5,
+      "bullet": "<b>Winner of the best presentation for Augmented Reality Award</b> in AWE 2017, the largest AR+VR event in the world.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_company_ar_2016",
+      "order": 6,
+      "bullet": "<b>Managed the architecture improvement</b> of the Meta2 Workspace, a working environment for Augmented Reality.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_company_ar_2016",
+      "order": 7,
+      "bullet": "Part of the <b>SDK team</b>, implementing features as the calibration profile system for the Meta2 headset.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "dena_sf_2015",
+      "order": 1,
+      "bullet": "<b>Technical Lead Engineer of <a href=\"https://www.youtube.com/watch?v=AHmqJtoQ_5I\">Deck Storm</a> (Unity 3D).</b> This is a modern mobile game based on customizable collectible card game (CCCG), and released in Google Play and Apple AppStore.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "dena_sf_2015",
+      "order": 2,
+      "bullet": "<b>Proposed and successfully implemented engineering quality standards</b>, reducing the amount of issues found by QA, and improving our game quality, robustness and user experience.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "dena_ca_2014",
+      "order": 1,
+      "bullet": "<b>Designed the software architecture</b> used in most company games.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "dena_ca_2014",
+      "order": 2,
+      "bullet": "Worked on <a href=\"https://www.youtube.com/watch?v=ZxZc-CSMArA\">World of Thingies</a> (Unity3D). This mobile video game was released in Google Play, Apple AppStore and Amazon AppStore.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "atakama_2011",
+      "order": 1,
+      "bullet": "<b>Led <a href=\"https://www.youtube.com/watch?v=hcreYLkur2M\">Dungeons and Dragons Arena of War</a> (Unity 3D) and Galaxy Assault (JavaScript)</b>, games released on Google Play and App Store.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "atakama_2011",
+      "order": 2,
+      "bullet": "<b>Evangelized Unity 3D</b> adoption across teams through mentorship and training.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "atakama_2011",
+      "order": 3,
+      "bullet": "Collaborated with DeNA San Francisco to enhance the company’s internal framework (C++, Objective-C, Java, JS).",
+      "parent_order": ""
+    },
+    {
+      "role_id": "atakama_2011",
+      "order": 4,
+      "bullet": "Contributed to the Android port of <a href=\"https://www.youtube.com/watch?v=wUb-lsnvP54\">Zombie Farm</a> using the internal engine; <b>this title was a key factor in DeNA’s acquisition of the company.</b>",
+      "parent_order": ""
+    }
+  ],
+  "projects": [
+    {
+      "order": 1,
+      "title": "Educational Applications",
+      "is_header": true,
+      "description": "Designed and developed multiple interactive learning applications used daily by my children to acquire core cognitive skills.",
+      "url": "",
+      "tags": ""
+    },
+    {
+      "order": 2,
+      "title": "Math Learning App",
+      "is_header": "",
+      "description": "enabling toddlers to understand additions through visual interactions.",
+      "url": "https://www.youtube.com/shorts/kBNF8ibUumQ",
+      "tags": "Education,Math"
+    },
+    {
+      "order": 3,
+      "title": "Marmilo (Brushing Teeth App)",
+      "is_header": "",
+      "description": "using interactive virtual pets and rewards to guide children through proper hygiene routines.",
+      "url": "https://www.youtube.com/watch?v=Uu79RckvPHE",
+      "tags": "Education,Habits"
+    },
+    {
+      "order": 4,
+      "title": "Interactive Experiences",
+      "is_header": true,
+      "description": "",
+      "url": "",
+      "tags": ""
+    },
+    {
+      "order": 5,
+      "title": "Horizon Worlds Creation Tools & Scripting Tutorial",
+      "is_header": "",
+      "description": "for the community, which was well received and featured as a must-see resource for beginners.",
+      "url": "https://www.youtube.com/watch?v=pS3Rvh4TjDM",
+      "tags": "Horizon Worlds,Community"
+    },
+    {
+      "order": 6,
+      "title": "Haunted House",
+      "is_header": "",
+      "description": "giving users a VR experience using Horizon Worlds.",
+      "url": "https://www.youtube.com/watch?v=A4FAtTAnVQg",
+      "tags": "Horizon Worlds,Game"
+    }
+  ],
+  "skills": [
+    {
+      "group": "Tech",
+      "order": 1,
+      "item": "C#"
+    },
+    {
+      "group": "Tech",
+      "order": 2,
+      "item": "Unity 3D"
+    },
+    {
+      "group": "Tech",
+      "order": 3,
+      "item": "C++"
+    },
+    {
+      "group": "Tech",
+      "order": 4,
+      "item": "Java"
+    },
+    {
+      "group": "Tech",
+      "order": 5,
+      "item": "JavaScript"
+    },
+    {
+      "group": "Tech",
+      "order": 6,
+      "item": "React"
+    },
+    {
+      "group": "Methods & Leadership",
+      "order": 1,
+      "item": "Team Management"
+    },
+    {
+      "group": "Methods & Leadership",
+      "order": 2,
+      "item": "Front End"
+    },
+    {
+      "group": "Methods & Leadership",
+      "order": 3,
+      "item": "Agile Methodologies"
+    },
+    {
+      "group": "Domains",
+      "order": 1,
+      "item": "Augmented Reality"
+    },
+    {
+      "group": "Domains",
+      "order": 2,
+      "item": "Virtual Reality"
+    },
+    {
+      "group": "Domains",
+      "order": 3,
+      "item": "Game Development"
+    },
+    {
+      "group": "Domains",
+      "order": 4,
+      "item": "Educational Technologies"
+    },
+    {
+      "group": "Quality & Tools",
+      "order": 1,
+      "item": "Software Usability"
+    },
+    {
+      "group": "Quality & Tools",
+      "order": 2,
+      "item": "Git"
+    },
+    {
+      "group": "Quality & Tools",
+      "order": 3,
+      "item": "Phabricator"
+    }
+  ],
+  "education": [
+    {
+      "order": 1,
+      "degree": "Master’s Degree",
+      "field": "Computer Science",
+      "school": "University of Chile",
+      "location": "",
+      "start_year": 2010,
+      "end_year": 2013,
+      "notes": ""
+    },
+    {
+      "order": 2,
+      "degree": "Engineers’ Degree",
+      "field": "Computer Science",
+      "school": "University of Chile",
+      "location": "",
+      "start_year": 2008,
+      "end_year": 2013,
+      "notes": ""
+    },
+    {
+      "order": 3,
+      "degree": "Bachelor’s Degree",
+      "field": "Computer Science",
+      "school": "University of Chile",
+      "location": "",
+      "start_year": 2005,
+      "end_year": 2008,
+      "notes": ""
+    },
+    {
+      "order": 4,
+      "degree": "Outstanding Student",
+      "field": "Computer Science",
+      "school": "University of Chile",
+      "location": "",
+      "start_year": 2009,
+      "end_year": 2009,
+      "notes": ""
+    }
+  ],
+  "publications": [
+    {
+      "order": 1,
+      "citation": "Leyton, D.; Pino, J.A.; Ochoa, S.F., \"EBTAM: technology acceptance in e-Business environments\", Information Systems and e-Business Management, 01 May. 2015.",
+      "url": "",
+      "doi": "10.1007/s10257-014-0255-2"
+    },
+    {
+      "order": 2,
+      "citation": "Leyton, D.; Pino, J.A.; Ochoa, S.F., \"Modeling Technology Acceptance in E-Business Environments\", e-Business Engineering (ICEBE), 2013 IEEE 10th International Conference on Coventry, UK, pp.90, 97, 11-13 Sept. 2013.",
+      "url": "",
+      "doi": "10.1109/ICEBE.2013.14"
+    }
+  ],
+  "languages": [
+    {
+      "order": 1,
+      "language": "English",
+      "level": "Fluent (written and spoken)"
+    },
+    {
+      "order": 2,
+      "language": "Spanish",
+      "level": "Native"
+    }
+  ],
+  "portfolio_projects": [
+    {
+      "id": "creation_tools",
+      "order": 1,
+      "title": "Horizon Worlds-Creation Tools",
+      "category": "AR/VR",
+      "description": "Meta Horizon Worlds creation tools are a suite of VR and desktop-based software designed to build, script, and publish virtual experiences. They allow TypeScript scripting for interactivity, and collaborative, real-time editing, making it accessible for both beginners and advanced creators.",
+      "image": "assets/CreationTools.jpg",
+      "links": "[\n  {\"label\":\"Horizon Worlds\",\"url\":\"https://www.youtube.com/watch?v=02kCEurWkqU\"},\n  {\"label\":\"Creation Tools\",\"url\":\"https://www.youtube.com/watch?v=HXQR5ZCF_4I\"},\n  {\"label\":\"Metaverse\",\"url\":\"https://www.youtube.com/watch?v=Uvufun6xer8\"}\n]",
+      "featured": true,
+      "visible": true
+    },
+    {
+      "id": "ar_phone",
+      "order": 2,
+      "title": "Phone Interaction in AR",
+      "category": "AR/VR",
+      "description": "My patented invention of a complete new way of interaction with Smart Phones in Augmented Reality, using the Meta2. This is an intuitive way to grab content from an Smart Phone, just using your hands.",
+      "image": "assets/arPhone.png",
+      "links": "[\n  {\"label\":\"Demo\",\"url\":\"https://www.youtube.com/watch?v=qJWbU47Txfw\"},\n  {\"label\":\"Live Presentation\",\"url\":\"https://www.youtube.com/watch?v=hMicVgj0aNc\"},\n{\"label\":\"Patents\",\"url\":\"https://patents.justia.com/inventor/diego-leyton-soto\"}\n]",
+      "featured": true,
+      "visible": true
+    },
+    {
+      "id": "ar_phone_control",
+      "order": 3,
+      "title": "Phone as an AR Control Device",
+      "category": "AR/VR",
+      "description": "My patented invention to use the phone as a remote control device to interact with AR objects.",
+      "image": "",
+      "links": "[\n  {\"label\":\"Demo\",\"url\":\"https://www.youtube.com/watch?v=j3LKPLdjbhA\"},\n  {\"label\":\"Patents\",\"url\":\"https://patents.justia.com/inventor/diego-leyton-soto\"}\n]",
+      "featured": "",
+      "visible": ""
+    },
+    {
+      "id": "ar_collab",
+      "order": 4,
+      "title": "Collaboration in AR",
+      "category": "AR/VR",
+      "description": "Collaboration with multiple users in AR allowing to work in the same environment",
+      "image": "",
+      "links": "[\n  {\"label\":\"Demo\",\"url\":\"https://www.youtube.com/watch?v=elFWSYvnJ0U\"}\n]",
+      "featured": "",
+      "visible": true
+    },
+    {
+      "id": "ar_3d_import",
+      "order": 5,
+      "title": "AR 3D Models Importer",
+      "category": "AR/VR",
+      "description": "My creation to move 3D models from the Sketchfab website, running in a phone, to AR just using your hands.",
+      "image": "",
+      "links": "[\n  {\"label\":\"Demo\",\"url\":\"https://www.youtube.com/watch?v=0A1ucKzKqMk\"}\n]",
+      "featured": "",
+      "visible": true
+    },
+    {
+      "id": "creation_tools_tutorial",
+      "order": 6,
+      "title": "Horizon Worlds Creation Tools & Scripting Tutorial",
+      "category": "AR/VR",
+      "description": "Tutorial for the community, which was well received and featured as a must-see resource for beginners.",
+      "image": "",
+      "links": "[\n  {\"label\":\"Part1\",\"url\":\"https://www.youtube.com/watch?v=pS3Rvh4TjDM\"},\n{\"label\":\"Part2\",\"url\":\"https://www.youtube.com/watch?v=AvmwiLvFxIE\"}\n]",
+      "featured": "",
+      "visible": true
+    },
+    {
+      "id": "haunted",
+      "order": 7,
+      "title": "Haunted House",
+      "category": "AR/VR",
+      "description": "VR immersive experience using Horizon Worlds.",
+      "image": "",
+      "links": "[\n  {\"label\":\"Build Process\",\"url\":\"https://www.youtube.com/watch?v=A4FAtTAnVQg\"},\n{\"label\":\"Experience\",\"url\":\"https://www.youtube.com/watch?v=kiDGJ0NVkmg\"}\n]",
+      "featured": "",
+      "visible": true
+    },
+    {
+      "id": "marmilo",
+      "order": 1,
+      "title": "Marmilo (Brushing Teeth App)",
+      "category": "Education",
+      "description": "Interactive virtual pet and reward based App to guide my kids through proper hygiene routines.",
+      "image": "assets/marmilo.png",
+      "links": "[\n  {\"label\":\"Demo\",\"url\":\"https://www.youtube.com/watch?v=Uu79RckvPHE\"}\n]",
+      "featured": true,
+      "visible": true
+    },
+    {
+      "id": "maths",
+      "order": 2,
+      "title": "Math Learning App",
+      "category": "Education",
+      "description": "I gave my kids a way to understand additions through visual interactions y logic rather than following a set of rules",
+      "image": "assets/maths.png",
+      "links": "[\n  {\"label\":\"Demo\",\"url\":\"https://www.youtube.com/shorts/kBNF8ibUumQ\"}\n]",
+      "featured": true,
+      "visible": true
+    },
+    {
+      "id": "d&d",
+      "order": 1,
+      "title": "D&D Arena or War",
+      "category": "Games",
+      "description": "Dungeons & Dragons game for smartphones and tablets published by DeNA Corp and developed in Unity3D. I led this project where the player took on the role of a group of characters to battle evil through dungeons.",
+      "image": "assets/d&d.jpg",
+      "links": "[\n  {\"label\":\"Trailer\",\"url\":\"https://www.youtube.com/watch?v=hcreYLkur2M\"},\n{\"label\":\"Demo\",\"url\":\"https://www.youtube.com/watch?v=gy5gjMekjzw\"}\n]",
+      "featured": true,
+      "visible": true
+    },
+    {
+      "id": "deckstorm",
+      "order": 2,
+      "title": "Deckstorm",
+      "category": "Games",
+      "description": "This is a modern mobile game based on customizable collectible card game (CCCG). I worked as the tech lead of this game implemented in Unity 3D and released in Google Play and Apple AppStor by DeNA Corp.",
+      "image": "",
+      "links": "[\n  {\"label\":\"Demo\",\"url\":\"https://www.youtube.com/watch?v=AHmqJtoQ_5I\"}\n]",
+      "featured": "",
+      "visible": true
+    },
+    {
+      "id": "thingies",
+      "order": 3,
+      "title": "World of Thingies",
+      "category": "Games",
+      "description": "I collaborated to this puzzle mobile video game implemented using Unity 3D and released in Google Play, Apple\nAppStore and Amazon AppStore by DeNA Corp.",
+      "image": "",
+      "links": "[\n  {\"label\":\"Demo\",\"url\":\"https://www.youtube.com/watch?v=ZxZc-CSMArA\"}\n]",
+      "featured": "",
+      "visible": true
+    },
+    {
+      "id": "zombies",
+      "order": 4,
+      "title": "Zombie Farm",
+      "category": "Games",
+      "description": "Android port of Zombie Farm using DeNA's internal engine",
+      "image": "",
+      "links": "[\n  {\"label\":\"Demo\",\"url\":\"https://www.youtube.com/watch?v=wUb-lsnvP54\"}\n]",
+      "featured": "",
+      "visible": true
+    },
+    {
+      "id": "samurai",
+      "order": 1,
+      "title": "Samurai",
+      "category": "Music",
+      "description": "",
+      "image": "assets/musicPlaying.jpg",
+      "links": "[\n  {\"label\":\"Video\",\"url\":\"https://www.youtube.com/watch?v=cy3I9emCh-U\"}\n]",
+      "featured": true,
+      "visible": true
+    },
+    {
+      "id": "blackbird_1",
+      "order": 2,
+      "title": "Black Bird",
+      "category": "Music",
+      "description": "",
+      "image": "",
+      "links": "[\n  {\"label\":\"Video\",\"url\":\"https://www.youtube.com/watch?v=3SYxYIwS-ek\"}\n]",
+      "featured": "",
+      "visible": true
+    },
+    {
+      "id": "sirduke",
+      "order": 3,
+      "title": "Sir Duke",
+      "category": "Music",
+      "description": "",
+      "image": "",
+      "links": "[\n  {\"label\":\"Video\",\"url\":\"https://www.youtube.com/watch?v=TcF1XBToWAE\"}\n]",
+      "featured": "",
+      "visible": true
+    },
+    {
+      "id": "day_in_the_life",
+      "order": 4,
+      "title": "A Day in the Life",
+      "category": "Music",
+      "description": "",
+      "image": "",
+      "links": "[\n  {\"label\":\"Video\",\"url\":\"https://www.youtube.com/watch?v=INrAeVgZ8Ho\"}\n]",
+      "featured": "",
+      "visible": true
+    },
+    {
+      "id": "spain",
+      "order": 5,
+      "title": "Spain",
+      "category": "Music",
+      "description": "",
+      "image": "",
+      "links": "[\n  {\"label\":\"Video\",\"url\":\"https://www.youtube.com/watch?v=pxhn5aurJck\"}\n]",
+      "featured": "",
+      "visible": true
+    },
+    {
+      "id": "bossa",
+      "order": 6,
+      "title": "Só Tinha De Ser Com Você",
+      "category": "Music",
+      "description": "",
+      "image": "",
+      "links": "[\n  {\"label\":\"Video\",\"url\":\"https://www.youtube.com/watch?v=uvfRVZis11c\"}\n]",
+      "featured": "",
+      "visible": true
+    },
+    {
+      "id": "blackbird_2",
+      "order": 7,
+      "title": "Black Bird",
+      "category": "Music",
+      "description": "",
+      "image": "",
+      "links": "[\n  {\"label\":\"Video\",\"url\":\"https://www.youtube.com/watch?v=MmFNv37fS48\"}\n]",
+      "featured": "",
+      "visible": true
+    }
+  ],
+  "portfolio_categories": [
+    {
+      "category": "AR/VR",
+      "order": 1,
+      "description": "Immersive experiences and creator workflows"
+    },
+    {
+      "category": "Games",
+      "order": 2,
+      "description": "Mobile Video Games, most of them released in AppStore and PlayStore "
+    },
+    {
+      "category": "Education",
+      "order": 3,
+      "description": "Apps to help my kids learn through interaction"
+    },
+    {
+      "category": "Music",
+      "order": 4,
+      "description": "Multi-instrument production and creative tech experiments"
+    }
+  ],
+  "meta": {
+    "generatedAt": "2026-02-28T04:01:34.713Z",
+    "public": false
+  }
+}
