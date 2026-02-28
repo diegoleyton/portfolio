@@ -1,1 +1,82 @@
 :root{ --max: 920px; --text: #0b0f19; --muted: rgba(11,15,25,.65); --line: rgba(11,15,25,.12); --chip: rgba(11,15,25,.06); --card: rgba(11,15,25,.03); /* Links */ --link: #1a56db; --link-soft: rgba(26,86,219,.35); } *{ box-sizing:border-box; } body{ margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; color: var(--text); background:#fff; } .container{ max-width:var(--max); margin:0 auto; padding: 26px 18px; } /* Top bar */ .topbar{ position: sticky; top: 0; background: rgba(255,255,255,.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); z-index: 10; } .topbar-inner{ display:flex; align-items:center; justify-content:space-between; gap: 12px; } .left{ display:flex; align-items:baseline; gap:10px; } .brand{ font-weight: 700; text-decoration:none; color: var(--text); } .sep{ color: var(--muted); } .btn{ border: 1px solid var(--line); background:#fff; padding: 10px 12px; border-radius: 12px; cursor:pointer; } /* Hero */ .hero{ padding: 18px 0 8px; border-bottom: 1px solid var(--line); margin-bottom: 18px; } .h-name{ font-size: 36px; font-weight: 800; margin:0; letter-spacing:-.4px; } .h-headline{ margin:10px 0 0; font-size: 16px; color: var(--muted); line-height:1.55; max-width: 70ch; } .h-meta{ margin-top: 12px; display:flex; flex-wrap:wrap; gap:10px; color: var(--muted); font-size: 14px; } .h-summary{ margin-top: 14px; color: var(--muted); line-height: 1.55; max-width: 78ch; } .h-summary > div + div{ margin-top: 10px; } /* Status */ .status{ border: 1px solid var(--line); background: var(--card); border-radius: 14px; padding: 12px 14px; margin: 16px 0 20px; color: var(--muted); font-size: 14px; } /* Sections */ .section{ margin: 24px 0; } .section h2{ font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; } /* Cards / grid */ .card{ border: 1px solid var(--line); border-radius: 16px; padding: 16px 16px; } .grid-2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; } @media (max-width: 820px){ .grid-2{ grid-template-columns: 1fr; } } /* Lists */ ul{ margin: 10px 0 0; padding-left: 18px; } li{ margin: 7px 0; line-height: 1.5; } /* Experience */ .role{ padding: 12px 0; border-top: 1px solid var(--line); } .role:first-child{ border-top:none; padding-top: 0; } .role-title{ display:flex; justify-content:space-between; gap: 12px; align-items: baseline; } .role-title .left{ font-weight: 700; } .role-title .right{ color: var(--muted); font-size: 13px; white-space: nowrap; } .role-sub{ margin-top: 6px; color: var(--muted); font-size: 14px; line-height:1.45; } .role-summary{ margin-top: 10px; color: var(--muted); line-height: 1.5; } /* Skills chips */ .chips{ display:flex; flex-wrap:wrap; gap: 8px; margin-top: 12px; } .chip{ background: var(--chip); border: 1px solid var(--line); padding: 6px 10px; border-radius: 999px; font-size: 13px; color: var(--muted); } .muted{ color: var(--muted); } .footer{ border-top: 1px solid var(--line); margin-top: 22px; padding-top: 14px; } /* Justify (your existing style) */ .card, .role-summary, .h-summary, li { text-align: justify; text-justify: inter-word; } /* ------------------------- Links (SCREEN) ------------------------- */ a{ color: var(--link); text-decoration: none; border-bottom: 1px solid var(--link-soft); } a:hover{ border-bottom-color: var(--link); } /* Previously forced inherit — override them cleanly */ .h-meta a, .role-sub a, .proj-item-title a{ color: var(--link); border-bottom: 1px solid var(--link-soft); } /* ------------------------- Impact ------------------------- */ .impact-card{ padding: 18px; } .impact-cat{ font-size: 14px; /* normal size */ font-weight: 700; /* bold only */ letter-spacing: 0; margin-bottom: 6px; border-bottom: 1px solid #eee; padding-bottom: 4px; } .impact-body{ display: flex; flex-direction: column; } .impact-p{ margin: 0; line-height: 1.7; text-align: justify; text-justify: inter-word; hyphens: auto; } .impact-divider{ border-top: 1px solid var(--line); margin: 14px 0; } /* Experience group title/summary */ .exp-group-title{ font-weight: 800; font-size: 19px; margin-bottom: 6px; } .exp-group-summary{ color: var(--muted); line-height: 1.55; margin-bottom: 14px; padding-bottom: 12px; text-align: justify; text-justify: inter-word; hyphens: auto; } /* ------------------------- Projects ------------------------- */ .proj-role{ padding: 14px 0; border-top: 1px solid var(--line); } .proj-role:first-child{ border-top: none; padding-top: 0; } .proj-role-title{ display:flex; justify-content:space-between; gap: 12px; align-items: baseline; } .proj-role-left{ font-weight: 800; font-size: 20px; letter-spacing: -0.2px; } .proj-role-sub{ margin-top: 10px; margin-bottom: 6px; color: var(--muted); line-height: 1.6; max-width: 90ch; text-align: justify; text-justify: inter-word; hyphens: auto; } .proj-bullets{ margin-top: 12px; padding-left: 22px; } .proj-bullets li{ margin: 10px 0; line-height: 1.65; text-align: justify; text-justify: inter-word; hyphens: auto; } .proj-item-title{ font-weight: 800; } .proj-item-desc{ color: inherit; font-weight: 400; } a, a:visited{ color: var(--link) !important; text-decoration: none; border-bottom: 1px solid var(--link-soft); } a:hover{ border-bottom-color: var(--link); } /* force inside sections that previously inherited color */ .h-meta a, .role-sub a, .proj-item-title a{ color: var(--link) !important; } .section-title{ font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; } /* PRINT version */ @media print{ a{ color: var(--link) !important; border-bottom: 1px solid var(--link) !important; } } /* ========================================================= PRINT ========================================================= */ @media print { @page { size: Letter; margin: 8mm; } html, body { background: white !important; } /* Font scaling (mostly affects rem/em; safe to keep) */ html { font-size: 11px !important; } body { font-size: 11px !important; line-height: 1.45 !important; } h1 { font-size: 20px !important; } h2 { font-size: 14px !important; margin: 0 0 6px 0 !important; break-after: avoid; page-break-after: avoid; } h3 { font-size: 13px !important; } /* Hide UI */ .noprint { display: none !important; } header.topbar, #btnPrint, #status, #generatedAt { display: none !important; } /* Layout width */ .container { max-width: 100% !important; padding: 0 !important; } /* Default pagination */ section { break-inside: auto; page-break-inside: auto; } /* Avoid breaking small blocks */ .card, .role, .proj-role { break-inside: avoid; page-break-inside: avoid; } /* Cards */ .card { padding: 12px !important; border: 1px solid #e5e5e5 !important; box-shadow: none !important; } /* Keep 2-column grids in print (Skills etc.) */ .grid-2{ display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; gap: 10px !important; } .grid-2 > * { min-width: 0 !important; } /* Chips */ .chips { gap: 6px !important; } .chip{ padding: 4px 8px !important; font-size: 12px !important; white-space: normal !important; max-width: 100% !important; } /* Tighten vertical rhythm */ .role { padding: 10px 0 !important; } .role-sub { margin-top: 4px !important; } .role-summary { margin-top: 8px !important; } .proj-role { padding: 12px 0 !important; } .proj-bullets { margin-top: 10px !important; } .proj-bullets li { margin: 6px 0 !important; } /* Experience: avoid double line under company summary */ .exp-group-summary{ border-bottom: none !important; padding-bottom: 0 !important; } /* Hero uses full width */ .hero, #hero, .hero * { max-width: none !important; } .h-summary, .role-summary, .proj-role-sub, .impact-body, .impact-p { max-width: none !important; } /* Links visible in PDF */ a{ color: var(--link) !important; text-decoration: none !important; border-bottom: 1px solid var(--link) !important; } /* Impact: 2 columns in print using multicolumn (stable pagination) */ .impact-section .grid-2{ display: block !important; column-count: 2 !important; column-gap: 12px !important; } .impact-section .impact-card{ display: inline-block !important; width: 100% !important; margin: 0 0 10px 0 !important; break-inside: avoid !important; page-break-inside: avoid !important; } /* Impact title size in print */ .impact-card .impact-cat{ font-size: 12px !important; font-weight: 700 !important; line-height: 1.2 !important; } }
+
+/* =========================================================
+   SCREEN ONLY — Compact layout (does NOT affect PDF)
+========================================================= */
+@media screen {
+
+  /* Slightly narrower + less padding */
+  :root { --max: 880px; }
+
+  .container{
+    padding: 18px 16px; /* antes 26px 18px */
+  }
+
+  /* Hero tighter */
+  .hero{
+    padding: 12px 0 6px;
+    margin-bottom: 14px;
+  }
+
+  .h-name{
+    font-size: 32px;   /* antes 36 */
+  }
+
+  .h-headline{
+    margin-top: 6px;
+    font-size: 15px;   /* antes 16 */
+    line-height: 1.45;
+    max-width: 68ch;
+  }
+
+  .h-meta{
+    margin-top: 8px;
+    font-size: 13px;   /* antes 14 */
+    gap: 8px;
+  }
+
+  .h-summary{
+    margin-top: 10px;
+    line-height: 1.45; /* antes 1.55 */
+    max-width: 74ch;
+  }
+  .h-summary > div + div{ margin-top: 8px; }
+
+  /* Sections tighter */
+  .section{ margin: 18px 0; } /* antes 24px */
+
+  .section h2, .section-title{
+    margin-bottom: 8px; /* antes 12px */
+  }
+
+  /* Cards tighter */
+  .card{
+    padding: 12px 14px; /* antes 16px 16px */
+    border-radius: 14px; /* antes 16 */
+  }
+
+  /* Lists tighter */
+  ul{ margin-top: 8px; }
+  li{ margin: 5px 0; line-height: 1.45; }
+
+  /* Experience tighter */
+  .role{ padding: 10px 0; }
+  .role-sub{ margin-top: 4px; }
+  .role-summary{ margin-top: 8px; line-height: 1.45; }
+
+  /* Impact tighter */
+  .impact-card{ padding: 14px; } /* antes 18 */
+  .impact-cat{ padding-bottom: 3px; margin-bottom: 5px; }
+  .impact-p{ line-height: 1.55; }
+  .impact-divider{ margin: 10px 0; }
+
+  /* Projects tighter */
+  .proj-role{ padding: 10px 0; }
+  .proj-role-sub{ margin-top: 8px; }
+  .proj-bullets{ margin-top: 10px; }
+  .proj-bullets li{ margin: 7px 0; }
+
+  /* Skills chips slightly tighter */
+  .chips{ margin-top: 10px; gap: 6px; }
+  .chip{ padding: 5px 9px; font-size: 12.5px; }
+}
