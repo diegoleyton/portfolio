@@ -20,10 +20,13 @@ body{
   background:#fff;
 }
 
+/* -------------------------
+   Layout (MORE COMPACT)
+   ------------------------- */
 .container{
   max-width:var(--max);
   margin:0 auto;
-  padding: 26px 18px;
+  padding: 18px 16px; /* was 26px 18px */
 }
 
 /* Top bar */
@@ -41,6 +44,7 @@ body{
   align-items:center;
   justify-content:space-between;
   gap: 12px;
+  padding: 10px 0; /* compact */
 }
 
 .left{
@@ -60,83 +64,89 @@ body{
 .btn{
   border: 1px solid var(--line);
   background:#fff;
-  padding: 10px 12px;
+  padding: 8px 10px;          /* compact */
   border-radius: 12px;
   cursor:pointer;
 }
 
-/* Hero */
+/* -------------------------
+   Hero (MORE COMPACT)
+   ------------------------- */
 .hero{
-  padding: 18px 0 8px;
+  padding: 12px 0 6px;         /* was 18px 0 8px */
   border-bottom: 1px solid var(--line);
-  margin-bottom: 18px;
+  margin-bottom: 14px;         /* was 18px */
 }
 
 .h-name{
-  font-size: 36px;
-  font-weight: 800;
+  font-size: 32px;             /* was 36px */
+  font-weight: 850;
   margin:0;
   letter-spacing:-.4px;
 }
 
 .h-headline{
-  margin:10px 0 0;
-  font-size: 16px;
+  margin: 8px 0 0;             /* was 10px */
+  font-size: 15px;             /* was 16px */
   color: var(--muted);
-  line-height:1.55;
-  max-width: 70ch;
+  line-height:1.45;            /* tighter */
+  max-width: 72ch;
 }
 
 .h-meta{
-  margin-top: 12px;
+  margin-top: 10px;            /* was 12px */
   display:flex;
   flex-wrap:wrap;
-  gap:10px;
+  gap: 10px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;             /* was 14px */
 }
 
 .h-summary{
-  margin-top: 14px;
+  margin-top: 10px;            /* was 14px */
   color: var(--muted);
-  line-height: 1.55;
-  max-width: 78ch;
+  line-height: 1.5;            /* was 1.55 */
+  font-size: 14.5px;           /* subtle compact */
+  max-width: 82ch;
 }
-.h-summary > div + div{ margin-top: 10px; }
+.h-summary > div + div{ margin-top: 8px; }  /* was 10px */
 
 /* Status */
 .status{
   border: 1px solid var(--line);
   background: var(--card);
   border-radius: 14px;
-  padding: 12px 14px;
-  margin: 16px 0 20px;
+  padding: 10px 12px;          /* compact */
+  margin: 12px 0 14px;         /* compact */
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
 }
 
-/* Sections */
-.section{ margin: 24px 0; }
+/* -------------------------
+   Sections (MORE COMPACT)
+   ------------------------- */
+.section{ margin: 18px 0; }    /* was 24px */
 
-.section h2{
-  font-size: 13px;
+.section h2,
+.section-title{
+  font-size: 12px;             /* was 13px */
   letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--muted);
-  margin: 0 0 12px;
+  margin: 0 0 10px;            /* was 12px */
 }
 
 /* Cards / grid */
 .card{
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 16px 16px;
+  padding: 14px 14px;          /* was 16px */
 }
 
 .grid-2{
   display:grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 12px;                   /* was 14px */
 }
 
 @media (max-width: 820px){
@@ -144,12 +154,17 @@ body{
 }
 
 /* Lists */
-ul{ margin: 10px 0 0; padding-left: 18px; }
-li{ margin: 7px 0; line-height: 1.5; }
+ul{ margin: 8px 0 0; padding-left: 18px; } /* tighter */
+li{
+  margin: 6px 0;               /* was 7px */
+  line-height: 1.45;           /* was 1.5 */
+}
 
-/* Experience */
+/* -------------------------
+   Experience (MORE COMPACT)
+   ------------------------- */
 .role{
-  padding: 12px 0;
+  padding: 10px 0;             /* was 12px */
   border-top: 1px solid var(--line);
 }
 .role:first-child{ border-top:none; padding-top: 0; }
@@ -163,37 +178,40 @@ li{ margin: 7px 0; line-height: 1.5; }
 .role-title .left{ font-weight: 700; }
 .role-title .right{
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12.5px;           /* was 13px */
   white-space: nowrap;
 }
 
 .role-sub{
-  margin-top: 6px;
+  margin-top: 4px;             /* was 6px */
   color: var(--muted);
-  font-size: 14px;
-  line-height:1.45;
+  font-size: 13.5px;           /* was 14px */
+  line-height:1.4;
 }
 
 .role-summary{
-  margin-top: 10px;
+  margin-top: 8px;             /* was 10px */
   color: var(--muted);
-  line-height: 1.5;
+  line-height: 1.45;
+  font-size: 14px;
 }
 
-/* Skills chips */
+/* -------------------------
+   Skills chips (COMPACT)
+   ------------------------- */
 .chips{
   display:flex;
   flex-wrap:wrap;
-  gap: 8px;
-  margin-top: 12px;
+  gap: 7px;                    /* was 8px */
+  margin-top: 10px;            /* was 12px */
 }
 
 .chip{
   background: var(--chip);
   border: 1px solid var(--line);
-  padding: 6px 10px;
+  padding: 5px 9px;            /* was 6px 10px */
   border-radius: 999px;
-  font-size: 13px;
+  font-size: 12.5px;           /* was 13px */
   color: var(--muted);
 }
 
@@ -201,8 +219,8 @@ li{ margin: 7px 0; line-height: 1.5; }
 
 .footer{
   border-top: 1px solid var(--line);
-  margin-top: 22px;
-  padding-top: 14px;
+  margin-top: 18px;            /* was 22px */
+  padding-top: 12px;
 }
 
 /* Justify (your existing style) */
@@ -214,7 +232,6 @@ li{ margin: 7px 0; line-height: 1.5; }
 /* -------------------------
    Links (SCREEN)
    ------------------------- */
-
 a{
   color: var(--link);
   text-decoration: none;
@@ -224,7 +241,7 @@ a:hover{
   border-bottom-color: var(--link);
 }
 
-/* Previously forced inherit — override them cleanly */
+/* force inside sections that previously inherited color */
 .h-meta a,
 .role-sub a,
 .proj-item-title a{
@@ -233,28 +250,27 @@ a:hover{
 }
 
 /* -------------------------
-   Impact
+   Impact (MORE COMPACT)
    ------------------------- */
-
-.impact-card{ padding: 18px; }
+.impact-card{ padding: 14px; } /* was 18px */
 
 .impact-cat{
-  font-size: 14px;      /* normal size */
-  font-weight: 700;     /* bold only */
-  letter-spacing: 0;
+  font-size: 13px;             /* was 14px */
+  font-weight: 700;
   margin-bottom: 6px;
   border-bottom: 1px solid #eee;
   padding-bottom: 4px;
 }
 
 .impact-body{
-  display: flex;
-  flex-direction: column;
+  display:flex;
+  flex-direction:column;
 }
 
 .impact-p{
   margin: 0;
-  line-height: 1.7;
+  line-height: 1.55;           /* was 1.7 */
+  font-size: 14.5px;
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
@@ -262,32 +278,31 @@ a:hover{
 
 .impact-divider{
   border-top: 1px solid var(--line);
-  margin: 14px 0;
+  margin: 10px 0;              /* was 14px */
 }
 
 /* Experience group title/summary */
 .exp-group-title{
-  font-weight: 800;
-  font-size: 19px;
+  font-weight: 850;
+  font-size: 18px;             /* was 19px */
   margin-bottom: 6px;
 }
 
 .exp-group-summary{
   color: var(--muted);
-  line-height: 1.55;
-  margin-bottom: 14px;
-  padding-bottom: 12px;
+  line-height: 1.45;           /* was 1.55 */
+  margin-bottom: 12px;         /* was 14px */
+  padding-bottom: 10px;        /* was 12px */
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
 }
 
 /* -------------------------
-   Projects
+   Projects (MORE COMPACT)
    ------------------------- */
-
 .proj-role{
-  padding: 14px 0;
+  padding: 12px 0;             /* was 14px */
   border-top: 1px solid var(--line);
 }
 .proj-role:first-child{
@@ -303,30 +318,31 @@ a:hover{
 }
 
 .proj-role-left{
-  font-weight: 800;
-  font-size: 20px;
+  font-weight: 850;
+  font-size: 18px;             /* was 20px */
   letter-spacing: -0.2px;
 }
 
 .proj-role-sub{
-  margin-top: 10px;
+  margin-top: 8px;             /* was 10px */
   margin-bottom: 6px;
   color: var(--muted);
-  line-height: 1.6;
-  max-width: 90ch;
+  line-height: 1.5;            /* was 1.6 */
+  max-width: 92ch;
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
+  font-size: 14.5px;
 }
 
 .proj-bullets{
-  margin-top: 12px;
+  margin-top: 10px;            /* was 12px */
   padding-left: 22px;
 }
 
 .proj-bullets li{
-  margin: 10px 0;
-  line-height: 1.65;
+  margin: 8px 0;               /* was 10px */
+  line-height: 1.55;           /* was 1.65 */
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
@@ -341,33 +357,23 @@ a:hover{
   font-weight: 400;
 }
 
+/* Keep links consistent (your overrides) */
 a,
 a:visited{
   color: var(--link) !important;
   text-decoration: none;
   border-bottom: 1px solid var(--link-soft);
 }
-
 a:hover{
   border-bottom-color: var(--link);
 }
-
-/* force inside sections that previously inherited color */
 .h-meta a,
 .role-sub a,
 .proj-item-title a{
   color: var(--link) !important;
 }
 
-.section-title{
-  font-size: 13px;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 12px;
-}
-
-/* PRINT version */
+/* PRINT version: keep as-is (your PDF is perfect) */
 @media print{
   a{
     color: var(--link) !important;
@@ -376,9 +382,8 @@ a:hover{
 }
 
 /* =========================================================
-   PRINT
+   PRINT (UNCHANGED)
 ========================================================= */
-
 @media print {
 
   @page { size: Letter; margin: 8mm; }
