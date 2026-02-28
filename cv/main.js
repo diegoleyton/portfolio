@@ -1,6 +1,7 @@
 // Paste your Apps Script Web App URL here:
-const DATA_URL = "https://script.google.com/macros/s/AKfycbzSE3uE_-l5qVDsj-KmYkuggIxjlPq5vuhzFvZL7RFYbVclHTgLyO5kTIv_sZscXMQLHg/exec";
-
+const DATA_URL =
+  new URLSearchParams(location.search).get("data") ||
+  new URL("../data/data.json", location.href).toString();
 
 const heroEl = document.getElementById("hero");
 const contentEl = document.getElementById("content");
