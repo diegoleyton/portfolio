@@ -1,5 +1,7 @@
 // ====== CONFIG ======
-const DATA_URL = "https://script.google.com/macros/s/AKfycbzSE3uE_-l5qVDsj-KmYkuggIxjlPq5vuhzFvZL7RFYbVclHTgLyO5kTIv_sZscXMQLHg/exec";
+const DATA_URL =
+  new URLSearchParams(location.search).get("data") ||
+  new URL("../data/data.json", location.href).toString();
 
 const $ = (sel) => document.querySelector(sel);
 
