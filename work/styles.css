@@ -285,7 +285,7 @@ a:hover{
   border-radius: 999px;
   text-decoration:none;
 
-  font-size: 13px;            
+  font-size: 13px !important;          
   font-weight: 500;           
 
   background: rgba(77,163,255,.12);
@@ -369,11 +369,11 @@ a:hover{
 }
 
 .proj-row-title{
-  font-weight: 900;
-  font-size: 18px;
-  letter-spacing: -0.01em;
-  margin-bottom: 6px;
-  color: var(--text);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.005em;
+  margin-bottom: 4px;
+  color: #e9eefc;
 }
 
 .proj-row-desc{
@@ -397,7 +397,7 @@ a:hover{
   border-radius: 999px;
   text-decoration:none;
 
-  font-size: 13px;
+  font-size: 12px !important;
   font-weight: 500;
 
   color: var(--accent);
@@ -448,4 +448,16 @@ a:hover{
     color: inherit !important;
     text-decoration:none !important;
   }
+}
+
+/* ===== FORCE LINK PILL SIZE + WEIGHT FIX ===== */
+
+.proj-links a,
+.proj-links.inline a,
+.linkbtn,
+.chiplink{
+  font-size: 12.5px !important;
+  font-weight: 400 !important;
+  padding: 3px 9px !important;
+  letter-spacing: .01em;
 }
