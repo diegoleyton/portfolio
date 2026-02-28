@@ -38,7 +38,7 @@
   .h-summary{
     margin-top: 10px;
     line-height: 1.45; /* antes 1.55 */
-    max-width: 74ch;
+    max-width: none;
   }
   .h-summary > div + div{ margin-top: 8px; }
 
