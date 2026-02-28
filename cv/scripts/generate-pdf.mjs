@@ -62,6 +62,14 @@ async function main() {
   await page.waitForTimeout(300); // tiny settle
 
   console.log("Generating PDF…");
+  await page.emulateMedia({ media: "print" });
+  const debug = await page.evaluate(() => ({
+    htmlFont: getComputedStyle(document.documentElement).fontSize,
+    bodyFont: getComputedStyle(document.body).fontSize,
+    media: matchMedia("print").matches ? "print" : "screen"
+  }));
+  console.log("DEBUG:", debug);
+    
   const pdf = await page.pdf({
     format: "Letter",
     printBackground: true,
