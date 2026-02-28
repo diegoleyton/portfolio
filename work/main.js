@@ -118,9 +118,6 @@ function renderHero(profile){
     <div class="hero-sub">${safeHTML(profile.headline || "")}</div>
     <div class="hero-meta">${contactBits}</div>
     ${summary ? `<div class="hero-summary">${summary}</div>` : ""}
-    <div class="hero-cta">
-      <a class="btn" href="../cv/">View CV</a>
-    </div>
   `;
 }
 
