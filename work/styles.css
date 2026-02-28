@@ -277,25 +277,27 @@ a:hover{
   gap: 8px;
 }
 
+/* Featured project buttons */
 .linkbtn{
   display:inline-flex;
   align-items:center;
-  padding: 7px 10px;
+  padding: 5px 10px;         
   border-radius: 999px;
   text-decoration:none;
 
-  background: var(--accent-soft);
+  font-size: 13px;            
+  font-weight: 500;           
+
+  background: rgba(77,163,255,.12);
   border: 1px solid rgba(77,163,255,.25);
   color: var(--accent);
 
-  font-weight: 750;
-  transition: background .18s ease, border-color .18s ease, transform .18s ease;
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
 }
 
 .linkbtn:hover{
-  background: rgba(77,163,255,.25);
+  background: rgba(77,163,255,.22);
   border-color: rgba(77,163,255,.45);
-  text-decoration:none;
   transform: translateY(-1px);
 }
 
@@ -387,25 +389,27 @@ a:hover{
   gap: 10px;
 }
 
+/* Inline project links */
 .chiplink{
   display:inline-flex;
   align-items:center;
-  padding: 7px 10px;
+  padding: 4px 10px;
   border-radius: 999px;
   text-decoration:none;
 
-  background: var(--accent-soft);
-  border: 1px solid rgba(77,163,255,.25);
-  color: var(--accent);
+  font-size: 13px;
+  font-weight: 500;
 
-  font-weight: 750;
-  transition: background .18s ease, border-color .18s ease, transform .18s ease;
+  color: var(--accent);
+  background: rgba(77,163,255,.10);
+  border: 1px solid rgba(77,163,255,.25);
+
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
 }
 
 .chiplink:hover{
-  background: rgba(77,163,255,.25);
+  background: rgba(77,163,255,.22);
   border-color: rgba(77,163,255,.45);
-  text-decoration:none;
   transform: translateY(-1px);
 }
 
