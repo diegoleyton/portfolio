@@ -49,6 +49,7 @@ function renderHero(p) {
   const links = [
     p.linkedin_url ? link(p.linkedin_url, "LinkedIn") : "",
     p.portfolio_url ? link(p.portfolio_url, "Portfolio") : "",
+    p.reference_url ? link(p.reference_url, "Reference Letter") : "",
     p.email ? `<a href="mailto:${esc(p.email)}">${esc(p.email)}</a>` : "",
     p.phone ? `<span>${esc(p.phone)}</span>` : "",
     p.location ? `<span>${esc(p.location)}</span>` : ""
