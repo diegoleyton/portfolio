@@ -373,34 +373,18 @@ a:hover{
   color: var(--link) !important;
 }
 
-/* PRINT version: keep as-is (your PDF is perfect) */
-@media print{
-  a{
-    color: var(--link) !important;
-    border-bottom: 1px solid var(--link) !important;
-  }
-}
-
 /* =========================================================
-   PRINT (UNCHANGED)
+   PRINT
 ========================================================= */
 @media print {
+  @page { size: Letter; margin: 6mm; }
 
-  @page { size: Letter; margin: 6mm; } /* antes 8mm */
-
-  html, body {
-    background: white !important;
-    font-size: 10px !important;   /* ↓ clave: escala general */
-    line-height: 1.35 !important;
-  }
+  /* Base scale (this is the one that matters) */
+  html { font-size: 10px !important; }
+  body { font-size: 10px !important; line-height: 1.35 !important; background:#fff !important; }
 
   h1 { font-size: 18px !important; }
-  h2 {
-    font-size: 13px !important;
-    margin: 0 0 5px 0 !important;
-    break-after: avoid;
-    page-break-after: avoid;
-  }
+  h2 { font-size: 13px !important; margin: 0 0 5px 0 !important; break-after: avoid; page-break-after: avoid; }
   h3 { font-size: 12px !important; }
 
   /* Hide UI */
@@ -408,73 +392,48 @@ a:hover{
   header.topbar,
   #btnPrint,
   #status,
-  #generatedAt { display:none !important; }
+  #generatedAt { display: none !important; }
 
   /* Layout */
-  .container{
-    max-width:100% !important;
-    padding:0 !important;
+  .container { max-width: 100% !important; padding: 0 !important; }
+
+  /* Cards */
+  .card { padding: 10px !important; border: 1px solid #e5e5e5 !important; box-shadow: none !important; }
+
+  /* Grids */
+  .grid-2 {
+    display: grid !important;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr) !important;
+    gap: 8px !important;
   }
+  .grid-2 > * { min-width: 0 !important; }
 
-  section{
-    break-inside:auto;
-    page-break-inside:auto;
+  /* Tighten spacing */
+  .role { padding: 8px 0 !important; }
+  .role-summary { margin-top: 6px !important; }
+
+  .proj-role { padding: 10px 0 !important; }
+  .proj-bullets { margin-top: 8px !important; }
+  .proj-bullets li { margin: 5px 0 !important; }
+
+  /* Chips */
+  .chip { padding: 3px 7px !important; font-size: 11px !important; }
+
+  /* Links visible */
+  a { color: #000 !important; border-bottom: 1px solid #000 !important; text-decoration: none !important; }
+
+  /* Impact: 2 columns with stable pagination */
+  .impact-section .grid-2 {
+    display: block !important;
+    column-count: 2 !important;
+    column-gap: 10px !important;
   }
-
-  .card,
-  .role,
-  .proj-role{
-    break-inside:avoid;
-    page-break-inside:avoid;
+  .impact-section .impact-card {
+    display: inline-block !important;
+    width: 100% !important;
+    margin: 0 0 8px 0 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
-
-  .card{
-    padding:10px !important;
-    border:1px solid #e5e5e5 !important;
-    box-shadow:none !important;
-  }
-
-  /* grids */
-  .grid-2{
-    display:grid !important;
-    grid-template-columns:1fr 1fr !important;
-    gap:8px !important;
-  }
-
-  /* spacing tighten */
-  .role{ padding:8px 0 !important; }
-  .role-summary{ margin-top:6px !important; }
-
-  .proj-role{ padding:10px 0 !important; }
-  .proj-bullets li{ margin:5px 0 !important; }
-
-  /* chips */
-  .chip{
-    padding:3px 7px !important;
-    font-size:11px !important;
-  }
-
-  /* links visible */
-  a{
-    color:#000 !important;
-    border-bottom:1px solid #000 !important;
-  }
-
-  /* impact columns */
-  .impact-section .grid-2{
-    display:block !important;
-    column-count:2 !important;
-    column-gap:10px !important;
-  }
-
-  .impact-section .impact-card{
-    display:inline-block !important;
-    width:100% !important;
-    margin:0 0 8px 0 !important;
-    break-inside:avoid !important;
-  }
-
-  .impact-card .impact-cat{
-    font-size:11px !important;
-  }
+  .impact-card .impact-cat { font-size: 11px !important; }
 }
