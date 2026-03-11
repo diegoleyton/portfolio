@@ -546,7 +546,7 @@
       "order": 1,
       "title": "Horizon Worlds-Creation Tools",
       "category": "AR/VR",
-      "description": "Meta Horizon Worlds creation tools are a suite of VR and desktop-based software designed to build, script, and publish virtual experiences. They allow TypeScript scripting for interactivity, and collaborative, real-time editing, making it accessible for both beginners and advanced creators.",
+      "description": "Meta Horizon Worlds creation tools are a suite of VR and desktop-based software designed to build, script, and publish virtual experiences. They allow TypeScript scripting for interactivity, and collaborative, real-time editing, making it accessible for both beginners and advanced creators.<b/>\nUnity, C#, C++, React, JS, Typescript",
       "image": "assets/CreationTools.jpg",
       "links": "[\n  {\"label\":\"Horizon Worlds\",\"url\":\"https://www.youtube.com/watch?v=02kCEurWkqU\"},\n  {\"label\":\"Creation Tools\",\"url\":\"https://www.youtube.com/watch?v=HXQR5ZCF_4I\"},\n  {\"label\":\"Metaverse\",\"url\":\"https://www.youtube.com/watch?v=Uvufun6xer8\"}\n]",
       "featured": true,
@@ -785,7 +785,7 @@
     }
   ],
   "meta": {
-    "generatedAt": "2026-02-28T04:01:34.713Z",
+    "generatedAt": "2026-03-11T23:13:31.874Z",
     "public": false
   }
 }
