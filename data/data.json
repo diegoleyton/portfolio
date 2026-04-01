@@ -546,7 +546,7 @@
       "order": 1,
       "title": "Horizon Worlds-Creation Tools",
       "category": "AR/VR",
-      "description": "Meta Horizon Worlds creation tools are a suite of VR and desktop-based software designed to build, script, and publish virtual experiences. They allow TypeScript scripting for interactivity, and collaborative, real-time editing, making it accessible for both beginners and advanced creators.\n\n<b>Unity, C#, C++, React, JS, Typescript, PHP</b>",
+      "description": "Meta Horizon Worlds creation tools are a suite of VR and desktop-based software designed to build, script, and publish virtual experiences. They allow TypeScript scripting for interactivity, and collaborative, real-time editing, making it accessible for both beginners and advanced creators.<br>\n\n<b>Unity, C#, C++, React, JS, Typescript, PHP</b>",
       "image": "assets/CreationTools.jpg",
       "links": "[\n  {\"label\":\"Horizon Worlds\",\"url\":\"https://www.youtube.com/watch?v=02kCEurWkqU\"},\n  {\"label\":\"Creation Tools\",\"url\":\"https://www.youtube.com/watch?v=HXQR5ZCF_4I\"},\n  {\"label\":\"Metaverse\",\"url\":\"https://www.youtube.com/watch?v=Uvufun6xer8\"}\n]",
       "featured": true,
@@ -630,8 +630,19 @@
       "visible": true
     },
     {
-      "id": "maths",
+      "id": "flowbit",
       "order": 2,
+      "title": "Flowbit (WIP)",
+      "category": "Education",
+      "description": "Interactive learning App to teach kids coding basics and logic.\n\n<b>Unity, C#</b>",
+      "image": "assets/flowbit.jpg",
+      "links": "[\n  {\"label\":\"Github\",\"url\":\"https://github.com/diegoleyton/codingGame/tree/main\"}\n]",
+      "featured": true,
+      "visible": true
+    },
+    {
+      "id": "maths",
+      "order": 3,
       "title": "Math Learning App",
       "category": "Education",
       "description": "I gave my kids a way to understand additions through visual interactions y logic rather than following a set of rules\n\n<b>Unity, C#</b>",
@@ -785,7 +796,7 @@
     }
   ],
   "meta": {
-    "generatedAt": "2026-03-11T23:21:56.641Z",
+    "generatedAt": "2026-04-01T22:50:27.295Z",
     "public": false
   }
 }
