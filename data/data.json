@@ -619,9 +619,20 @@
       "visible": true
     },
     {
-      "id": "marmilo",
+      "id": "marmilo_2",
       "order": 1,
-      "title": "Marmilo (Brushing Teeth App)",
+      "title": "MarMilo",
+      "category": "Education",
+      "description": "MarMilo helps children build positive habits through incentives, play, autonomy, and family-supported daily routines.\n<b>Unity, C#, ASP.NET Core, PostgreSQL, Supabase, REST APIs</b>",
+      "image": "assets/Marmilo2.png",
+      "links": "",
+      "featured": true,
+      "visible": true
+    },
+    {
+      "id": "marmilo",
+      "order": 2,
+      "title": "Brushing Teeth App",
       "category": "Education",
       "description": "Interactive virtual pet and reward based App to guide my kids through proper hygiene routines.\n\n<b>Unity, C#</b>",
       "image": "assets/marmilo.png",
@@ -631,7 +642,7 @@
     },
     {
       "id": "flowbit",
-      "order": 2,
+      "order": 3,
       "title": "Flowbit (WIP)",
       "category": "Education",
       "description": "Interactive learning App to teach kids coding basics and logic.\n\n<b>Unity, C#</b>",
@@ -642,7 +653,7 @@
     },
     {
       "id": "maths",
-      "order": 3,
+      "order": 4,
       "title": "Math Learning App",
       "category": "Education",
       "description": "I gave my kids a way to understand additions through visual interactions y logic rather than following a set of rules\n\n<b>Unity, C#</b>",
@@ -796,7 +807,7 @@
     }
   ],
   "meta": {
-    "generatedAt": "2026-04-01T22:53:02.626Z",
+    "generatedAt": "2026-07-15T18:57:17.496Z",
     "public": false
   }
 }
