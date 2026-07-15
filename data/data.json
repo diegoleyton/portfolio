@@ -624,8 +624,8 @@
       "title": "MarMilo",
       "category": "Education",
       "description": "MarMilo helps children build positive habits through incentives, play, autonomy, and family-supported daily routines.\n<b>Unity, C#, ASP.NET Core, PostgreSQL, Supabase, REST APIs</b>",
-      "image": "assets/Marmilo2.png",
-      "links": "",
+      "image": "assets/marmilo2.png",
+      "links": "[]",
       "featured": true,
       "visible": true
     },
@@ -807,7 +807,7 @@
     }
   ],
   "meta": {
-    "generatedAt": "2026-07-15T18:57:17.496Z",
+    "generatedAt": "2026-07-15T19:07:05.326Z",
     "public": false
   }
 }
