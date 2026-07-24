@@ -142,7 +142,7 @@
       "start": "2023-08-01T07:00:00.000Z",
       "end": "2026-03-01T08:00:00.000Z",
       "summary": "",
-      "group_summary": "<b>Tech Lead / Engineering Manager</b> in <a href=\"https://www.youtube.com/watch?v=02kCEurWkqU\">Horizon Worlds</a> building the <a href=\"https://www.youtube.com/watch?v=Uvufun6xer8\">Metaverse</a>"
+      "group_summary": "<b>Tech Lead / Engineering Manager</b> in <a href=\"https://www.youtube.com/watch?v=02kCEurWkqU\">Horizon Worlds</a>."
     },
     {
       "id": "meta_em_2021",
@@ -854,7 +854,7 @@
     }
   ],
   "meta": {
-    "generatedAt": "2026-07-24T19:25:36.283Z",
+    "generatedAt": "2026-07-24T19:30:04.884Z",
     "public": false
   }
 }
