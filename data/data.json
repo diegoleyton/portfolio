@@ -129,7 +129,7 @@
       "start": "2026-05-01T07:00:00.000Z",
       "end": "",
       "summary": "",
-      "group_summary": ""
+      "group_summary": "Founder and creator of <a href=\"https://diegoleyton.github.io/marmilo-site/\">MarMilo</a>."
     },
     {
       "id": "meta_tl_2023",
@@ -672,7 +672,7 @@
       "category": "Education",
       "description": "MarMilo helps children build positive habits through incentives, play, autonomy, and family-supported daily routines.\n<b>Unity, C#, ASP.NET Core, PostgreSQL, Supabase, REST APIs</b>",
       "image": "assets/marmilo2.png",
-      "links": "[]",
+      "links": "[\n  {\"label\":\"Web Site\",\"url\":\"https://diegoleyton.github.io/marmilo-site/\"}\n]",
       "featured": true,
       "visible": true
     },
@@ -854,7 +854,7 @@
     }
   ],
   "meta": {
-    "generatedAt": "2026-07-24T19:30:04.884Z",
+    "generatedAt": "2026-07-24T21:33:56.874Z",
     "public": false
   }
 }
