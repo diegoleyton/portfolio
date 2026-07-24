@@ -10,8 +10,8 @@
     "reference_url": "https://github.com/diegoleyton/portfolio/blob/main/cv/Diego_Leyton_Refefence_Letter.pdf",
     "show_phone": false,
     "show_email": true,
-    "summary_1": "<b>Senior Software Engineer and Creative Technologist</b> driven by the idea that technology can spark curiosity and make learning joyful. With experience in game development, virtual/augmented reality, and interactive technologies, I’ve spent my career building systems that connect creativity with innovation.",
-    "summary_2": "At <b>Meta, I’ve helped shape the metaverse</b> — as an Engineering Manager and Technical Lead — and I’m passionate about using these skills to create meaningful experiences."
+    "summary_1": "<b>Senior Software Engineer and Creative Technologist</b> with 14+ years of experience building interactive products across <b>games, AR/VR, and consumer applications</b>. I specialize in turning ambitious ideas into polished experiences by combining strong engineering, product thinking, and creativity.",
+    "summary_2": "At <b>Meta, I served as an Engineering Manager and Technical Lead</b> on Horizon Worlds, building large-scale social and multiplayer VR experiences. I am also the <b>founder of MarMilo</b>, a Unity-based family application that I have taken from concept to betavalidation with real users."
   },
   "sections": [
     {
@@ -66,19 +66,23 @@
   "career_summary": [
     {
       "order": 1,
-      "bullet": "<b>14+ years of experience in software engineering</b>, including <b>7 years at Meta (Facebook)</b> — over 2 years as <b>Engineering Manager and currently Tech Lead</b> in Horizon Worlds, <b>building the Metaverse.</b>"
+      "bullet": "<b>14+ years of experience</b> building interactive products across <b>games, AR/VR, education, and consumer applications.</b>"
     },
     {
       "order": 2,
-      "bullet": "Previously worked at <b>Meta Company (AR startup) for 2 years</b> as Lead Engineer, developing <b>Augmented Reality</b> collaboration technologies."
+      "bullet": "<b>7 years at Meta (Facebook)</b>, serving as <b>Engineering Manager and Tech Lead</b> on Horizon Worlds, delivering <b>large-scale multiplayer VR experiences.</b>"
     },
     {
       "order": 3,
-      "bullet": "<b>5 years in the game industry</b> (DeNA, Atakama Labs), leading the development of mobile games released worldwide on Google Play, App Store and Amazon Store."
+      "bullet": "Previously <b>Lead Engineer at Meta Company (AR startup)</b>, developing <b>Augmented Reality collaboration technology</b>, following <b>5 years in the game industry</b> (DeNA, Atakama Labs) shipping mobile games worldwide on Google Play, the App Store, and Amazon Appstore."
     },
     {
       "order": 4,
-      "bullet": "<b>Passionate about interactive technologies</b> and education through technology, designing self-directed learning tools used daily by my children."
+      "bullet": "<b>5 years in the game industry</b> (DeNA, Atakama Labs), leading the development of mobile games released worldwide on Google Play, App Store and Amazon Store."
+    },
+    {
+      "order": 5,
+      "bullet": "<b>Founder of MarMilo</b>, leading <b>product strategy, UX, software engineering, and user research</b> for a Unity-based platform that helps families build positive habits through <b>positive reinforcement.</b>"
     }
   ],
   "impact": [
@@ -115,21 +119,34 @@
   ],
   "experience": [
     {
-      "id": "meta_tl_2023",
+      "id": "marmilo_found_2026",
       "order": 1,
+      "company": "MarMilo",
+      "company_group": "MarMilo",
+      "company_url": "",
+      "location": "CA, USA",
+      "role_title": "Founder & Software Engineer",
+      "start": "2026-05-01T07:00:00.000Z",
+      "end": "",
+      "summary": "",
+      "group_summary": ""
+    },
+    {
+      "id": "meta_tl_2023",
+      "order": 2,
       "company": "Meta (Facebook)",
       "company_group": "Meta (Facebook)",
       "company_url": "",
       "location": "Menlo Park, CA, USA",
       "role_title": "Senior Software Engineer & Tech Lead (Horizon Worlds)",
       "start": "2023-08-01T07:00:00.000Z",
-      "end": "",
+      "end": "2026-03-01T08:00:00.000Z",
       "summary": "",
       "group_summary": "<b>Tech Lead / Engineering Manager</b> in <a href=\"https://www.youtube.com/watch?v=02kCEurWkqU\">Horizon Worlds</a> building the <a href=\"https://www.youtube.com/watch?v=Uvufun6xer8\">Metaverse</a>"
     },
     {
       "id": "meta_em_2021",
-      "order": 2,
+      "order": 3,
       "company": "Meta (Facebook)",
       "company_group": "Meta (Facebook)",
       "company_url": "",
@@ -142,7 +159,7 @@
     },
     {
       "id": "meta_tl_2018",
-      "order": 3,
+      "order": 4,
       "company": "Meta (Facebook)",
       "company_group": "Meta (Facebook)",
       "company_url": "",
@@ -155,7 +172,7 @@
     },
     {
       "id": "meta_company_ar_2016",
-      "order": 4,
+      "order": 5,
       "company": "Meta Company (AR)",
       "company_group": "Meta Company (AR)",
       "company_url": "",
@@ -168,7 +185,7 @@
     },
     {
       "id": "dena_sf_2015",
-      "order": 5,
+      "order": 6,
       "company": "DeNA Studios San Francisco",
       "company_group": "DeNA Studios",
       "company_url": "",
@@ -181,7 +198,7 @@
     },
     {
       "id": "dena_ca_2014",
-      "order": 6,
+      "order": 7,
       "company": "DeNA Studios Canada",
       "company_group": "DeNA Studios",
       "company_url": "",
@@ -194,7 +211,7 @@
     },
     {
       "id": "atakama_2011",
-      "order": 7,
+      "order": 8,
       "company": "Atakama Labs (DeNA Studios Santiago)",
       "company_group": "DeNA Studios",
       "company_url": "",
@@ -338,6 +355,36 @@
       "order": 4,
       "bullet": "Contributed to the Android port of <a href=\"https://www.youtube.com/watch?v=wUb-lsnvP54\">Zombie Farm</a> using the internal engine; <b>this title was a key factor in DeNA’s acquisition of the company.</b>",
       "parent_order": ""
+    },
+    {
+      "role_id": "marmilo_found_2026",
+      "order": 1,
+      "bullet": "Built a cross-platform family habit-building application in Unity, including separate Parents and Kids experiences.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "marmilo_found_2026",
+      "order": 2,
+      "bullet": "Designed and implemented a configurable reward system that adapts to each child's developmental needs.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "marmilo_found_2026",
+      "order": 3,
+      "bullet": "Developed the complete application architecture, cloud synchronization, content pipeline, and deployment process.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "marmilo_found_2026",
+      "order": 4,
+      "bullet": "Conducted beta validation with real families, collecting product feedback and iterating on UX and engagement.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "marmilo_found_2026",
+      "order": 5,
+      "bullet": "Led product vision, UX design, engineering, and release planning as a solo founder.",
+      "parent_order": ""
     }
   ],
   "projects": [
@@ -359,7 +406,7 @@
     },
     {
       "order": 3,
-      "title": "Marmilo (Brushing Teeth App)",
+      "title": "Brushing Teeth App",
       "is_header": "",
       "description": "using interactive virtual pets and rewards to guide children through proper hygiene routines.",
       "url": "https://www.youtube.com/watch?v=Uu79RckvPHE",
@@ -807,7 +854,7 @@
     }
   ],
   "meta": {
-    "generatedAt": "2026-07-15T19:07:05.326Z",
+    "generatedAt": "2026-07-24T19:25:36.283Z",
     "public": false
   }
 }
