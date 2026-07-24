@@ -89,32 +89,27 @@
     {
       "order": 1,
       "category": "Product Development",
-      "bullet": "<b>Led and contributed</b> to multiple high-impact applications used by millions of users — including <b>Meta’s Horizon Worlds</b> and several mobile games"
+      "bullet": "<b>Built products used by millions of users</b>, including Meta's Horizon Worlds and multiple mobile games."
     },
     {
       "order": 2,
       "category": "Engineering Excellence",
-      "bullet": "<b>Drove a cross-team test coverage initiative (9 teams, ~90 engineers)</b>, raising automation <b>from 50% to 90%</b>, reducing regressions, and improving release stability."
+      "bullet": "<b>Led large-scale engineering initiatives at Meta</b>, including architecture and UI migrations, as well as a cross-team quality initiative spanning <b>9 teams (~90 engineers)</b> that increased automated test coverage <b>from 50% to 90%</b>."
     },
     {
       "order": 3,
-      "category": "System Migration",
-      "bullet": "As Engineering Manager at Meta, <b>led the migration of Creation Tools architecture</b>, enabling faster iteration and better user experiences and performance.\n\nAs Tech Lead at Meta, <b>led the organization-wide migration of the UI system</b>, improving maintainability and cross-platform consistency."
+      "category": "AR Innovation",
+      "bullet": "<b>Invented a patented smartphone-to-AR interaction technique</b>, helping secure investor funding and earning the <b>AWE 2017 Best Presentation Award</b>."
     },
     {
       "order": 4,
-      "category": "AR Innovation",
-      "bullet": "<b>Invented the smartphone-to-AR interaction technique</b>, later <b>patented and widely showcased</b> in product demos and investor presentations, which was instrumental in securing additional investor funding. <b>Winner of the AWE 2017 Best Presentation Award</b> for Augmented Reality."
+      "category": "Architecture Design",
+      "bullet": "<b>Created the MVCB architecture pattern</b>, adopted across multiple AR projects."
     },
     {
       "order": 5,
-      "category": "Architecture Design",
-      "bullet": "Created the MVCB <b>architecture pattern, adopted across AR projects</b> for modularity and engine independence."
-    },
-    {
-      "order": 6,
-      "category": "Educational Technology",
-      "bullet": "<b>Created personal learning tools</b> for my children that transformed daily routines — from understanding math to brushing teeth — into playful, self-motivated activities, reflecting my belief that technology can nurture curiosity and autonomy from an early age."
+      "category": "Education",
+      "bullet": "<b>Founded MarMilo</b>, a Unity-based family platform inspired by our own parenting journey, now helping early beta families build positive habits through encouragement, meaningful incentives, and everyday routines."
     }
   ],
   "experience": [
@@ -854,7 +849,7 @@
     }
   ],
   "meta": {
-    "generatedAt": "2026-07-24T21:33:56.874Z",
+    "generatedAt": "2026-07-24T21:45:18.837Z",
     "public": false
   }
 }
