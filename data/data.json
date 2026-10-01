@@ -74,15 +74,11 @@
     },
     {
       "order": 3,
-      "bullet": "Previously <b>Lead Engineer at Meta Company (AR startup)</b>, developing <b>Augmented Reality collaboration technology</b>, following <b>5 years in the game industry</b> (DeNA, Atakama Labs) shipping mobile games worldwide on Google Play, the App Store, and Amazon Appstore."
+      "bullet": "Previously <b>Lead Engineer at Meta Company (AR startup)</b>, developing <b>Augmented Reality collaboration technology</b>, following <b>5 years in the game industry</b> (DeNA, Atakama Labs) leading and shipping mobile games worldwide on Google Play, the App Store, and Amazon Appstore."
     },
     {
       "order": 4,
-      "bullet": "<b>5 years in the game industry</b> (DeNA, Atakama Labs), leading the development of mobile games released worldwide on Google Play, App Store and Amazon Store."
-    },
-    {
-      "order": 5,
-      "bullet": "<b>Founder of MarMilo</b>, leading <b>product strategy, UX, software engineering, and user research</b> for a Unity-based platform that helps families build positive habits through <b>positive reinforcement.</b>"
+      "bullet": "<b>Founder of MarMilo</b>, leading <b>product strategy, UX, and engineering</b> for a family technology platform focused on <b>positive habits, child independence, and real-world learning.</b>"
     }
   ],
   "impact": [
@@ -108,8 +104,8 @@
     },
     {
       "order": 5,
-      "category": "Education",
-      "bullet": "<b>Founded MarMilo</b>, a Unity-based family platform inspired by our own parenting journey, now helping early beta families build positive habits through encouragement, meaningful incentives, and everyday routines."
+      "category": "Family & Education",
+      "bullet": "<b>Founded MarMilo</b>, building a family-centered platform that connects positive habits, child autonomy, real-world routines, and interactive learning experiences."
     }
   ],
   "experience": [
@@ -120,11 +116,11 @@
       "company_group": "MarMilo",
       "company_url": "",
       "location": "CA, USA",
-      "role_title": "Founder & Software Engineer",
+      "role_title": "Founder, Product & Engineering",
       "start": "2026-05-01T07:00:00.000Z",
       "end": "",
       "summary": "",
-      "group_summary": "Founder and creator of <a href=\"https://marmilo.app/\">MarMilo</a>."
+      "group_summary": ""
     },
     {
       "id": "meta_tl_2023",
@@ -222,13 +218,19 @@
     {
       "role_id": "meta_tl_2023",
       "order": 1,
-      "bullet": "<b>Led performance tools team</b> to enable creators to evaluate and improve runtime efficiency across Horizon platforms.",
+      "bullet": "<b>Led performance tools team</b>, enabling creators to evaluate and improve runtime performance across Horizon platforms.",
       "parent_order": ""
     },
     {
       "role_id": "meta_tl_2023",
       "order": 2,
-      "bullet": "<b>Led a pillar-wide test coverage initiative across 9 teams (~90 engineers)</b>, increasing automated test coverage from 50% to 90%, resulting in a measurable reduction in regressions and higher release stability.",
+      "bullet": "<b>Led a pillar-wide quality initiative across 9 teams (~90 engineers)</b>, increasing automated test coverage from 50% to 90% and reducing regressions.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_tl_2023",
+      "order": 3,
+      "bullet": "<b>Worked directly with Horizon Worlds creators</b> to understand real workflows, identify pain points, and translate feedback into product, tooling, and UX improvements.",
       "parent_order": ""
     },
     {
@@ -246,19 +248,25 @@
     {
       "role_id": "meta_tl_2018",
       "order": 1,
-      "bullet": "<b>Tech Lead</b> of the team building the <b>Creation Tools</b> of Horizon Worlds",
+      "bullet": "<b>Tech Lead for Horizon Worlds Creation Tools</b>, building core creation workflows for Horizon's first generation of creators.",
       "parent_order": ""
     },
     {
       "role_id": "meta_tl_2018",
       "order": 2,
-      "bullet": "<b>Tech Lead building the VR UI library</b> for Horizon Worlds.",
+      "bullet": "<b>Led development of Horizon Worlds' VR UI framework</b>, used across product experiences and creation tools.",
       "parent_order": ""
     },
     {
       "role_id": "meta_tl_2018",
       "order": 3,
-      "bullet": "Senior Software Engineer <b>building the first version of Horizon Worlds</b>.",
+      "bullet": "Built core systems for the <b>first version of Horizon Worlds</b>, from early product development through launch.",
+      "parent_order": ""
+    },
+    {
+      "role_id": "meta_tl_2018",
+      "order": 4,
+      "bullet": "<b>Created a comprehensive <a href=\"https://www.youtube.com/watch?v=pS3Rvh4TjDM\">Creation Tools & Scripting tutorial</a> for the creator community</b>, later featured as a recommended resource for beginners.",
       "parent_order": ""
     },
     {
@@ -354,82 +362,32 @@
     {
       "role_id": "marmilo_found_2026",
       "order": 1,
-      "bullet": "Built a cross-platform family habit-building application in Unity, including separate Parents and Kids experiences.",
+      "bullet": "Founded and built <b><a href=\"https://marmilo.app/\">MarMilo</a>, a cross-platform family technology platform</b> designed to help children build positive habits, independence, and everyday routines.",
       "parent_order": ""
     },
     {
       "role_id": "marmilo_found_2026",
       "order": 2,
-      "bullet": "Designed and implemented a configurable reward system that adapts to each child's developmental needs.",
+      "bullet": "Architected and built the <b>multi-app ecosystem</b>, including Parents and Kids experiences, cloud synchronization, interactive UI/UX, and a reusable framework for integrating new learning and routine-based experiences.",
       "parent_order": ""
     },
     {
       "role_id": "marmilo_found_2026",
       "order": 3,
-      "bullet": "Developed the complete application architecture, cloud synchronization, content pipeline, and deployment process.",
+      "bullet": "Designed MarMilIA, a <b>human-in-the-loop AI system</b> that helps parents explore everyday challenges and create practical, adaptable plans while keeping parents in control of every decision.",
       "parent_order": ""
     },
     {
       "role_id": "marmilo_found_2026",
       "order": 4,
-      "bullet": "Conducted beta validation with real families, collecting product feedback and iterating on UX and engagement.",
+      "bullet": "Built interactive experiences including <b>Maths, Brush, and Coding</b>, connecting digital guidance with learning and activities in the real world.",
       "parent_order": ""
     },
     {
       "role_id": "marmilo_found_2026",
       "order": 5,
-      "bullet": "Led product vision, UX design, engineering, and release planning as a solo founder.",
+      "bullet": "Leading <b>product strategy, UX, architecture, and engineering</b>, including interaction design and original music and sound, while iterating with families and collaborating with researchers, educators, and clinical professionals.",
       "parent_order": ""
-    }
-  ],
-  "projects": [
-    {
-      "order": 1,
-      "title": "Educational Applications",
-      "is_header": true,
-      "description": "Designed and developed multiple interactive learning applications used daily by my children to acquire core cognitive skills.",
-      "url": "",
-      "tags": ""
-    },
-    {
-      "order": 2,
-      "title": "Math Learning App",
-      "is_header": "",
-      "description": "enabling toddlers to understand additions through visual interactions.",
-      "url": "https://www.youtube.com/shorts/kBNF8ibUumQ",
-      "tags": "Education,Math"
-    },
-    {
-      "order": 3,
-      "title": "Brushing Teeth App",
-      "is_header": "",
-      "description": "using interactive virtual pets and rewards to guide children through proper hygiene routines.",
-      "url": "https://www.youtube.com/watch?v=Uu79RckvPHE",
-      "tags": "Education,Habits"
-    },
-    {
-      "order": 4,
-      "title": "Interactive Experiences",
-      "is_header": true,
-      "description": "",
-      "url": "",
-      "tags": ""
-    },
-    {
-      "order": 5,
-      "title": "Horizon Worlds Creation Tools & Scripting Tutorial",
-      "is_header": "",
-      "description": "for the community, which was well received and featured as a must-see resource for beginners.",
-      "url": "https://www.youtube.com/watch?v=pS3Rvh4TjDM",
-      "tags": "Horizon Worlds,Community"
-    },
-    {
-      "order": 6,
-      "title": "Haunted House",
-      "is_header": "",
-      "description": "giving users a VR experience using Horizon Worlds.",
-      "url": "https://www.youtube.com/watch?v=A4FAtTAnVQg",
-      "tags": "Horizon Worlds,Game"
     }
   ],
   "skills": [
@@ -849,7 +807,7 @@
     }
   ],
   "meta": {
-    "generatedAt": "2026-07-24T23:08:22.190Z",
+    "generatedAt": "2026-10-01T19:39:55.725Z",
     "public": false
   }
 }
