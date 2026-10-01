@@ -76,14 +76,13 @@ function renderAll(d) {
         .filter(s => truthy(s.enabled))
         .sort((a,b) => num(a.order) - num(b.order))
         .map(s => String(s.key))
-    : ["career_summary","impact","experience","projects","skills","education","publications","languages"];
+    : ["career_summary","impact","experience","skills","education","publications","languages"];
 
   const blocks = [];
   for (const key of orderedKeys) {
     if (key === "career_summary") blocks.push(renderBulletsSection("Career Summary", d.career_summary, "bullet"));
     if (key === "impact") blocks.push(renderImpact("Impact Summary", d.impact));
     if (key === "experience") blocks.push(renderExperience("Experience", d.experience, d.experience_bullets));
-    if (key === "projects") blocks.push(renderProjects("Personal Projects", d.projects));
     if (key === "skills") blocks.push(renderSkills("Skills", d.skills));
     if (key === "education") blocks.push(renderEducation("Education", d.education));
     if (key === "publications") blocks.push(renderPublications("Publications", d.publications));
@@ -222,80 +221,6 @@ function renderExperience(title, roles, bullets) {
       <div style="display:flex; flex-direction:column; gap:14px">${groupsHtml.join("")}</div>
     </section>
   `;
-}
-
-function renderProjects(title, rows) {
-  const list = (rows || []).slice().sort((a,b)=>num(a.order)-num(b.order));
-  if (!list.length) return "";
-
-  // Build blocks: [{header:{title,desc}, items:[...]}, ...]
-  const blocks = [];
-  let current = null;
-
-  for (const r of list) {
-    const isHeader = truthy(r.is_header);
-    const t = String(r.title || "").trim();
-    const d = String(r.description || "").trim();
-
-    if (isHeader) {
-      current = { header: { title: t, desc: d }, items: [] };
-      blocks.push(current);
-      continue;
-    }
-
-    if (!current) {
-      // If someone forgot a header, create an implicit one
-      current = { header: { title: "Personal Projects", desc: "" }, items: [] };
-      blocks.push(current);
-    }
-
-    current.items.push(r);
-  }
-
-  const blocksHtml = blocks.map((b, idx) => {
-    const h = b.header || { title: "", desc: "" };
-    const items = b.items || [];
-
-    return `
-      <div class="proj-role">
-        <div class="proj-role-title">
-          <div class="proj-role-left">${htmlOrText(h.title)}</div>
-        </div>
-        ${h.desc ? `<div class="proj-role-sub">${htmlOrText(h.desc)}</div>` : ""}
-
-        ${items.length ? `
-          <ul class="proj-bullets">
-            ${items.map(i => `<li>${projectItemLine(i)}</li>`).join("")}
-          </ul>
-        ` : ""}
-      </div>
-    `;
-  }).join("");
-
-  return `
-    <section class="section">
-      <h2>${esc(title)}</h2>
-      <div class="card">
-        ${blocksHtml}
-      </div>
-    </section>
-  `;
-}
-
-function projectItemLine(i) {
-  const t = String(i.title || "").trim();
-  let d = String(i.description || "").trim();
-  const u = String(i.url || "").trim();
-
-  if (t && d.toLowerCase().startsWith(t.toLowerCase())) {
-    d = d.slice(t.length).trim().replace(/^[:\-–—]\s*/, "");
-  }
-
-  const titleHtml = u
-    ? `<a href="${esc(u)}" target="_blank" rel="noreferrer">${htmlOrText(t)}</a>`
-    : `${htmlOrText(t)}`;
-
-  return `<span class="proj-item-title">${titleHtml}</span>${d ? ` <span class="proj-item-desc">${htmlOrText(d)}</span>` : ""}`;
 }
 
 // If you currently use raw HTML in the sheet (e.g. <b>), keep it.
