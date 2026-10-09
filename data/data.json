@@ -95,7 +95,7 @@
     {
       "order": 3,
       "category": "AR Innovation",
-      "bullet": "<b>Invented a patented smartphone-to-AR interaction technique</b>, helping secure investor funding and earning the <b>AWE 2017 Best Presentation Award</b>."
+      "bullet": "<b>Invented a smartphone-to-AR interaction technique</b> covered by two granted <b>U.S. patents</b>, helping secure investor funding and earning the <b>AWE 2017 Best Presentation Award</b>."
     },
     {
       "order": 4,
@@ -290,7 +290,7 @@
     {
       "role_id": "meta_company_ar_2016",
       "order": 4,
-      "bullet": "<b>Inventor of the interaction with Smart Phones in Augmented Reality</b>. This is an intuitive way to grab content from a Smart Phone, just using the hands (patented). Videos: <a href=\"https://www.youtube.com/watch?v=elFWSYvnJ0U\">Collaboration in AR</a> and <a href=\"https://www.youtube.com/watch?v=0A1ucKzKqMk\">Importing 3D Models</a>.",
+      "bullet": "<b>Inventor on two granted <a href=\"https://patents.justia.com/inventor/diego-leyton-soto\">U.S. patents</a></b> for mobile-to-AR interaction with 2D and 3D content (US 10,168,789; US 10,488,942). Videos: <a href=\"https://www.youtube.com/watch?v=elFWSYvnJ0U\">Collaboration in AR</a> and <a href=\"https://www.youtube.com/watch?v=0A1ucKzKqMk\">Importing 3D Models</a>.",
       "parent_order": ""
     },
     {
@@ -557,7 +557,7 @@
       "order": 2,
       "title": "Phone Interaction in AR",
       "category": "AR/VR",
-      "description": "My patented invention of a complete new way of interaction with Smart Phones in Augmented Reality, using the Meta2. This is an intuitive way to grab content from an Smart Phone, just using your hands.\n\n<b>Unity, C#</b>",
+      "description": "Inventor on a granted U.S. patents for mobile-to-AR interaction with 2D and 3D content (US 10,168,789; US 10,488,942). This is an intuitive way to grab content from an Smart Phone into the real world (AR), just using your hands.\n\n<b>Unity, C#</b>",
       "image": "assets/arPhone.png",
       "links": "[\n  {\"label\":\"Demo\",\"url\":\"https://www.youtube.com/watch?v=qJWbU47Txfw\"},\n  {\"label\":\"Live Presentation\",\"url\":\"https://www.youtube.com/watch?v=hMicVgj0aNc\"},\n{\"label\":\"Patents\",\"url\":\"https://patents.justia.com/inventor/diego-leyton-soto\"}\n]",
       "featured": true,
@@ -568,7 +568,7 @@
       "order": 3,
       "title": "Phone as an AR Control Device",
       "category": "AR/VR",
-      "description": "My patented invention to use the phone as a remote control device to interact with AR objects.\n\n<b>Unity, C#/b>",
+      "description": "Inventor on a granted U.S. patents using the phone as a remote control device to interact with AR objects.\n\n<b>Unity, C#/b>",
       "image": "",
       "links": "[\n  {\"label\":\"Demo\",\"url\":\"https://www.youtube.com/watch?v=j3LKPLdjbhA\"},\n  {\"label\":\"Patents\",\"url\":\"https://patents.justia.com/inventor/diego-leyton-soto\"}\n]",
       "featured": "",
@@ -807,7 +807,7 @@
     }
   ],
   "meta": {
-    "generatedAt": "2026-10-01T19:39:55.725Z",
+    "generatedAt": "2026-10-09T08:30:21.871Z",
     "public": false
   }
 }
