@@ -568,7 +568,7 @@
       "order": 3,
       "title": "Phone as an AR Control Device",
       "category": "AR/VR",
-      "description": "Inventor on a granted U.S. patents using the phone as a remote control device to interact with AR objects.\n\n<b>Unity, C#/b>",
+      "description": "Inventor on a granted U.S. patents using the phone as a remote control device to interact with AR objects.\n\n<b>Unity, C#</b>",
       "image": "",
       "links": "[\n  {\"label\":\"Demo\",\"url\":\"https://www.youtube.com/watch?v=j3LKPLdjbhA\"},\n  {\"label\":\"Patents\",\"url\":\"https://patents.justia.com/inventor/diego-leyton-soto\"}\n]",
       "featured": "",
@@ -807,7 +807,7 @@
     }
   ],
   "meta": {
-    "generatedAt": "2026-10-09T08:34:42.090Z",
+    "generatedAt": "2026-10-09T08:37:04.531Z",
     "public": false
   }
 }
