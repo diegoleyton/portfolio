@@ -572,7 +572,7 @@
       "image": "",
       "links": "[\n  {\"label\":\"Demo\",\"url\":\"https://www.youtube.com/watch?v=j3LKPLdjbhA\"},\n  {\"label\":\"Patents\",\"url\":\"https://patents.justia.com/inventor/diego-leyton-soto\"}\n]",
       "featured": "",
-      "visible": ""
+      "visible": true
     },
     {
       "id": "ar_collab",
@@ -807,7 +807,7 @@
     }
   ],
   "meta": {
-    "generatedAt": "2026-10-09T08:30:21.871Z",
+    "generatedAt": "2026-10-09T08:34:42.090Z",
     "public": false
   }
 }
